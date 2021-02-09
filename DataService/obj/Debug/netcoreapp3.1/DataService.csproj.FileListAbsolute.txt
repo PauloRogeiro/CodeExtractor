@@ -1,0 +1,12 @@
+C:\projects\CodeExtractor\ExtractorUI\DataService\bin\Debug\netcoreapp3.1\DataService.deps.json
+C:\projects\CodeExtractor\ExtractorUI\DataService\bin\Debug\netcoreapp3.1\DataService.dll
+C:\projects\CodeExtractor\ExtractorUI\DataService\bin\Debug\netcoreapp3.1\DataService.pdb
+C:\projects\CodeExtractor\ExtractorUI\DataService\bin\Debug\netcoreapp3.1\Objects.dll
+C:\projects\CodeExtractor\ExtractorUI\DataService\bin\Debug\netcoreapp3.1\Objects.pdb
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.csprojAssemblyReference.cache
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.AssemblyInfoInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.AssemblyInfo.cs
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.csproj.CoreCompileInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.csproj.CopyComplete
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.dll
+C:\projects\CodeExtractor\ExtractorUI\DataService\obj\Debug\netcoreapp3.1\DataService.pdb

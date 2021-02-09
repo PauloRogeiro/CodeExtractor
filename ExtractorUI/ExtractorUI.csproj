@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.1.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MVVM-From-A-To-Z-Sources\Sources\05-Models-Validation\MvvmApp\MvvmFramework\MvvmFramework.csproj" />
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj" />
+    <ProjectReference Include="..\DataService\DataService.csproj" />
+    <ProjectReference Include="..\ExtratorViewModels\ExtractorViewModels.csproj" />
+    <ProjectReference Include="..\Objects\Objects.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ui\" />
+  </ItemGroup>
+
+</Project>

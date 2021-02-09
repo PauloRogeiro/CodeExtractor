@@ -1,0 +1,14 @@
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\BusinessObjects.deps.json
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\BusinessObjects.dll
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\BusinessObjects.pdb
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\DataService.dll
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\Objects.dll
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\DataService.pdb
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\bin\Debug\netcoreapp3.1\Objects.pdb
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.csprojAssemblyReference.cache
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.AssemblyInfoInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.AssemblyInfo.cs
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.csproj.CoreCompileInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.csproj.CopyComplete
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.dll
+C:\projects\CodeExtractor\ExtractorUI\BusinessObjects\obj\Debug\netcoreapp3.1\BusinessObjects.pdb

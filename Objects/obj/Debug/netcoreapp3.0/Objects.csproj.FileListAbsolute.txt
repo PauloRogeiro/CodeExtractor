@@ -1,0 +1,8 @@
+C:\projects\CodeExtractor\ExtractorUI\Objects\bin\Debug\netcoreapp3.0\Objects.deps.json
+C:\projects\CodeExtractor\ExtractorUI\Objects\bin\Debug\netcoreapp3.0\Objects.dll
+C:\projects\CodeExtractor\ExtractorUI\Objects\bin\Debug\netcoreapp3.0\Objects.pdb
+C:\projects\CodeExtractor\ExtractorUI\Objects\obj\Debug\netcoreapp3.0\Objects.AssemblyInfoInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\Objects\obj\Debug\netcoreapp3.0\Objects.AssemblyInfo.cs
+C:\projects\CodeExtractor\ExtractorUI\Objects\obj\Debug\netcoreapp3.0\Objects.dll
+C:\projects\CodeExtractor\ExtractorUI\Objects\obj\Debug\netcoreapp3.0\Objects.pdb
+C:\projects\CodeExtractor\ExtractorUI\Objects\obj\Debug\netcoreapp3.0\Objects.csproj.CoreCompileInputs.cache

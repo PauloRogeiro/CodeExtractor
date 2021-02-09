@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "YXV1LEdSYP6XrZe3tb4lJ2knHBTolxrK6KF527l7IEnwvxUKHnjQUKw93BfuU7NyqqFHi0bBfCjZFi4p3nBzPg==",
+  "success": true,
+  "projectFilePath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paulo\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.0.0-preview4\\microsoft.toolkit.mvvm.7.0.0-preview4.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

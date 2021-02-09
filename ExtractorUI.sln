@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractorUI", "ExtractorUI\ExtractorUI.csproj", "{2A690BDE-8BE8-4346-B574-5F996061D3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{D30F46A1-3291-43D7-A4C5-29B7AC768293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractorViewModels", "ExtratorViewModels\ExtractorViewModels.csproj", "{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Objects", "Objects\Objects.csproj", "{5B40D7F4-2D09-48F8-A992-A1C39E92349B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataServiceTests", "DataServiceTests\DataServiceTests.csproj", "{869BE743-0E57-48F7-B47F-0719B0E0B8E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmFramework", "..\..\MVVM-From-A-To-Z-Sources\Sources\05-Models-Validation\MvvmApp\MvvmFramework\MvvmFramework.csproj", "{AA13AC6F-4D96-45D5-AADC-9BB827F0C406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{F4D14D5C-86BF-4B87-859C-9059B34BF1DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A690BDE-8BE8-4346-B574-5F996061D3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A690BDE-8BE8-4346-B574-5F996061D3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A690BDE-8BE8-4346-B574-5F996061D3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A690BDE-8BE8-4346-B574-5F996061D3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30F46A1-3291-43D7-A4C5-29B7AC768293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30F46A1-3291-43D7-A4C5-29B7AC768293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30F46A1-3291-43D7-A4C5-29B7AC768293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30F46A1-3291-43D7-A4C5-29B7AC768293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B40D7F4-2D09-48F8-A992-A1C39E92349B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B40D7F4-2D09-48F8-A992-A1C39E92349B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B40D7F4-2D09-48F8-A992-A1C39E92349B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B40D7F4-2D09-48F8-A992-A1C39E92349B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869BE743-0E57-48F7-B47F-0719B0E0B8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869BE743-0E57-48F7-B47F-0719B0E0B8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869BE743-0E57-48F7-B47F-0719B0E0B8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869BE743-0E57-48F7-B47F-0719B0E0B8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA13AC6F-4D96-45D5-AADC-9BB827F0C406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA13AC6F-4D96-45D5-AADC-9BB827F0C406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA13AC6F-4D96-45D5-AADC-9BB827F0C406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA13AC6F-4D96-45D5-AADC-9BB827F0C406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D14D5C-86BF-4B87-859C-9059B34BF1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D14D5C-86BF-4B87-859C-9059B34BF1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D14D5C-86BF-4B87-859C-9059B34BF1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D14D5C-86BF-4B87-859C-9059B34BF1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F859AD99-C5FC-4B2C-B812-C1F3273E193F}
+	EndGlobalSection
+EndGlobal

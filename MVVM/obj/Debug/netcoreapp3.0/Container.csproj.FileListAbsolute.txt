@@ -1,0 +1,8 @@
+C:\projects\CodeExtractor\ExtractorUI\MVVM\bin\Debug\netcoreapp3.0\Container.deps.json
+C:\projects\CodeExtractor\ExtractorUI\MVVM\bin\Debug\netcoreapp3.0\Container.dll
+C:\projects\CodeExtractor\ExtractorUI\MVVM\bin\Debug\netcoreapp3.0\Container.pdb
+C:\projects\CodeExtractor\ExtractorUI\MVVM\obj\Debug\netcoreapp3.0\Container.csprojAssemblyReference.cache
+C:\projects\CodeExtractor\ExtractorUI\MVVM\obj\Debug\netcoreapp3.0\Container.AssemblyInfoInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\MVVM\obj\Debug\netcoreapp3.0\Container.AssemblyInfo.cs
+C:\projects\CodeExtractor\ExtractorUI\MVVM\obj\Debug\netcoreapp3.0\Container.dll
+C:\projects\CodeExtractor\ExtractorUI\MVVM\obj\Debug\netcoreapp3.0\Container.pdb
