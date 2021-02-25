@@ -54,7 +54,7 @@ namespace app {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppControl;component/cardlistview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppControl;V1.0.0.0;component/cardlistview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CardListView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
