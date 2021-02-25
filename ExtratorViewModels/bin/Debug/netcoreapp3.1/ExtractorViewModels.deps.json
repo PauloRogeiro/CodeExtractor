@@ -64,6 +64,9 @@
         }
       },
       "Objects/1.0.0": {
+        "dependencies": {
+          "Microsoft.Toolkit.Mvvm": "7.0.0-preview4"
+        },
         "runtime": {
           "Objects.dll": {}
         }

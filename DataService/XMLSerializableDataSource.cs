@@ -27,17 +27,23 @@ namespace DataService
                         using (XmlReader xr = XmlReader.Create(sr))
                         {
                             Object instance = null;
-                            if (xr.HasValue)
+
+                            xr.MoveToContent();
+                            while (xr.Read())
                             {
-                                xr.MoveToContent();
-                                xr.MoveToFirstAttribute();
-                                while (xr.Read())
+                                if (xr.NodeType == XmlNodeType.Element)
                                 {
-                                    String propertyName = xr.Name;
-                                    Object propertyValue = xr.Value;
-                                    while (xr.HasAttributes)
+
+                                    if (xr.Name.Equals("String"))
                                     {
 
+                                        Object obj = xr.GetAttribute("Value");
+                                        _list.Add((T)obj);
+
+
+                                    }
+                                    else
+                                    {
                                         var t = typeof(T);
                                         var octor = t.GetConstructors()[0];
 
@@ -46,22 +52,32 @@ namespace DataService
                                             instance = Activator.CreateInstance(t);
                                         }
 
-                                        var members = t.GetProperties(BindingFlags.DeclaredOnly);
-                                        var item = t.GetProperty(propertyName, BindingFlags.DeclaredOnly);
-                                        if (item.CanWrite)
+                                        if (xr.HasAttributes)
                                         {
-                                            item.SetValue(instance, propertyName);
-                                        }
+                                            while (xr.MoveToNextAttribute())
+                                            {
 
-                                        xr.MoveToNextAttribute();
-                                        propertyName = xr.Name;
-                                        propertyValue = xr.Value;
+                                                var item = t.GetProperty( xr.Name);
+                                                if ( null !=t &&item.CanWrite)
+                                                {
+                                                    Object obj = xr.Value;
+                                                    item.SetValue(instance, obj);
+                                             
+                                                }
+
+                                            }
+                                            xr.MoveToElement();
+
+                                        }
+                                        _list.Add((T)instance);
+
 
                                     }
 
-
                                 }
+
                             }
+
                         }
 
 
@@ -83,8 +99,6 @@ namespace DataService
         private void SerializeAll()
         {
 
-            XmlSerializer ser = new XmlSerializer(typeof(T));
-
             try
             {
                 if (File.Exists(_fileName))
@@ -92,10 +106,35 @@ namespace DataService
                     File.Delete(_fileName);
                 }
 
-                using StreamWriter sw = File.CreateText(_fileName);
-                foreach (T item in _list)
+
+                XmlWriterSettings settings = new XmlWriterSettings();
+                settings.Indent = true;
+                settings.IndentChars = "\t";
+
+                using (XmlWriter sw = XmlWriter.Create(_fileName, settings))
                 {
-                    ser.Serialize(sw, item);
+
+                    sw.WriteStartElement("List");
+
+                    foreach (var item in _list)
+                    {
+                        sw.WriteStartElement(item.GetType().Name);
+                        sw.WriteAttributeString("Value", item.ToString());
+
+                        foreach (var prop in item.GetType().GetProperties(BindingFlags.Public))
+                        {
+                            sw.WriteStartElement(prop.Name);
+                            sw.WriteAttributeString("Value", prop.GetValue(item).ToString());
+                            sw.WriteEndElement();
+
+
+                        }
+                        sw.WriteEndElement();
+
+                    }
+
+                    sw.WriteEndElement();
+
                 }
 
             }

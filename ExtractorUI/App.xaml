@@ -1,34 +1,104 @@
-﻿<Application x:Class="ExtractorUI.App"
+﻿<Application x:Class="app.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ExtractorUI"
+             xmlns:local="clr-namespace:app"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              Startup="App_OnStartup"
              StartupUri="MainWindowView.xaml">
     <Application.Resources>
-        
-        
-        
+
 
         <ResourceDictionary>
+
+            <Color
+                x:Key="DarkColor">#005b9f</Color>
+            <Color
+                x:Key="MidColor">#0288d1</Color>
+            <Color
+                x:Key="LightColor">#5eb8ff</Color>
             
+            <Color
+                x:Key="DarkColorText">#ffff</Color>
+            <Color
+                x:Key="MidColorText">#000</Color>
+            <Color
+                x:Key="LightColorText">#000</Color>
 
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <local:Bootstrapper x:Key="bootstrapper" />
-                </ResourceDictionary>
+            <Color
+                x:Key="AccentLight">#82f7ff</Color>
 
-                <materialDesign:BundledTheme
-                    BaseTheme="Light"
-                    PrimaryColor="Teal"                    
-                    SecondaryColor="Blue"  />
-                <ResourceDictionary
-                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            <Color
+                x:Key="AccentDark">#0094cc</Color>
+
+            <Color
+                x:Key="AccentLightText">#000</Color>
+
+            <Color
+                x:Key="AccentDarkText">#000</Color>
+
+
+            <SolidColorBrush
+                x:Key="PrimaryBackGround"
+                Color="{StaticResource MidColor}" />
+
+
+            <SolidColorBrush
+                x:Key="LightBackGround"
+                Color="{StaticResource LightColor}" />
+
+            <SolidColorBrush
+                x:Key="DarkBackGround"
+                Color="{StaticResource DarkColor}" />
+
+
+            <SolidColorBrush
+                x:Key="PrimaryForeGround"
+                Color="{StaticResource MidColorText}" />
+
+
+            <SolidColorBrush
+                x:Key="LightForeGround"
+                Color="{StaticResource LightColorText}" />
+
+            <SolidColorBrush
+                x:Key="DarkForeGround"
+                Color="{StaticResource DarkColorText}" />
+
+
+            <SolidColorBrush
+                x:Key="AccentDarkBackGround"
+                Color="{StaticResource AccentDark}" />
+
+
+            <SolidColorBrush
+                x:Key="AccentLightBackGround"
+                Color="{StaticResource AccentLight}" />
+
+
+            <SolidColorBrush
+                x:Key="AccentLightForeGround"
+                Color="{StaticResource AccentLightText}" />
+
+            <SolidColorBrush
+                x:Key="AccentDarkForeGround"
+                Color="{StaticResource AccentDarkText}" />
 
 
 
-            </ResourceDictionary.MergedDictionaries>
-
+      
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary
+                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                    <ResourceDictionary
+                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                    <ResourceDictionary
+                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                    <ResourceDictionary
+                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                    <ResourceDictionary
+                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+        
 
         </ResourceDictionary>
        

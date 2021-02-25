@@ -5,7 +5,7 @@ using Castle.Core;
 using Castle.MicroKernel;
 using Castle.MicroKernel.Context;
 
-namespace ExtractorUI {
+namespace app {
     public class AppSettingsConvention : ISubDependencyResolver {
         public bool CanResolve(
             CreationContext context,

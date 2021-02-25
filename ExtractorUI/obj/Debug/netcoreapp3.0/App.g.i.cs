@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using ExtractorUI;
+using app;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -33,7 +33,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace ExtractorUI {
+namespace app {
     
     
     /// <summary>
@@ -65,7 +65,7 @@ namespace ExtractorUI {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/ExtractorUI;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/app;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -81,7 +81,7 @@ namespace ExtractorUI {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
         public static void Main() {
-            ExtractorUI.App app = new ExtractorUI.App();
+            app.App app = new app.App();
             app.InitializeComponent();
             app.Run();
         }

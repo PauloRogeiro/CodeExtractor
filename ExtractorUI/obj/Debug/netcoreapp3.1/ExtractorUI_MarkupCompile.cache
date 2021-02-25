@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\App.xaml
-4-806878704
+6112882243
 
-10-1348878168
+11317613606
 209-762691444
-ContabilView.xaml;FiscalView.xaml;MainWindowView.xaml;ProcessamentoContabilView.xaml;
+ContabilView.xaml;FiscalView.xaml;MainWindowView.xaml;MenuListView.xaml;MenuView.xaml;ProcessamentoContabilView.xaml;
 
 False
 

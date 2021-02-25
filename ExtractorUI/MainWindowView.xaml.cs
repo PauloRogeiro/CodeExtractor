@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ExtractorUI
+namespace app
 {
     /// <summary>
     /// Lógica interna para MainWindowView.xaml
@@ -20,6 +20,43 @@ namespace ExtractorUI
         public MainWindowView()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState == WindowState.Maximized || Application.Current.MainWindow.WindowState == WindowState.Normal)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Minimized;
+
+
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
+
+
+            }
+            else
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+
+
+            }
+
         }
     }
 }

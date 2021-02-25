@@ -7,7 +7,9 @@ using System.Windows;
 using System.Windows.Data;
 using MvvmFramework;
 
-namespace ExtractorUI {
+namespace app {
+    
+    [ValueConversion(typeof(String), typeof(ViewModelObject))]
     public class DesignTimeViewModelLocator : IValueConverter {
         public static DesignTimeViewModelLocator Instance = new DesignTimeViewModelLocator();
 
@@ -19,7 +21,7 @@ namespace ExtractorUI {
         }
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
-            var assembliesForSearchingIn = AssemblySource.Instance;
+            var assembliesForSearchingIn = AssemblySource.Instance; 
 
             var allExportedTypes = new List<Type>();
             foreach (var assembly in assembliesForSearchingIn) {

@@ -1,74 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Collections.ObjectModel;
-using Objects;
-using System.Runtime.CompilerServices;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
-using BusinessObjects;
 using MvvmFramework;
-using System.Windows.Data;
 
 
 
-namespace ExtractorUI
+namespace app
 {
 
-    public class MainWindowViewModel : ViewModelObject
+    public class MainWindowViewModel : ObservableObject
     {
 
 
-        private int _selectedIndex;
-        private String _textoPesquisado;
-        private IMenuRepository _rep;
+        protected int _selectedIndex;
+        protected MenuListViewModel _menuVM;
 
 
-        private ICollection<ViewModelObject> _models;
-        private ObservableCollection<Menu> _menus = new ObservableCollection<Menu>();
-        private ViewModelObject _selectedModel;
-        private Menu _selectedMenu;
+        protected ICollection<ViewModelObject> _models;
+        protected ViewModelObject _selectedModel;
 
 
 
-        public MainWindowViewModel(IMenuRepository repository) : base(null)
+        public MainWindowViewModel(String menuXMl, MenuListViewModel menus) : base()
         {
-            _rep = repository;
+
+            _menuVM = menus;
+            _menuVM.PropertyChanged += MenuChanged;
             _models = new ObservableCollection<ViewModelObject>(GerarModels());
-            GerarMenus();
-            _rep.SalvarMenus(_menus);
-
-
-        }
-        public MainWindowViewModel() : base(null)
-        {
 
 
         }
 
 
 
-        public Menu SelectedMenu
+
+        private void MenuChanged(object sender, PropertyChangedEventArgs e)
         {
-            get => _selectedMenu;
-            set
+
+            MenuViewModel changedMenu = ((MenuListViewModel)sender).SelectedMenu;
+
+            if (changedMenu == null)
             {
-                SetProperty<Menu>(ref _selectedMenu, value);
-                foreach (var item in _models)
-                {
-                    if (item.DisplayMenu.Name.Equals(_selectedMenu.Name))
-                    {
-                        SelectedModel = item;
-                        break;
-                    }
-                }
+                return;
             }
+
+            String viewName = this.GetType().Namespace + "." + changedMenu.View.ToString().Replace("View", "ViewModel");
+            SelectedModel = IoC.Get<ViewModelObject>(viewName);
+
+
+
+
         }
 
         public ViewModelObject SelectedModel
         {
             get => _selectedModel;
-            set => SetProperty<ViewModelObject>(ref _selectedModel, value);
+            set
+            {
+                SetProperty<ViewModelObject>(ref _selectedModel, value);
+
+            }
         }
 
 
@@ -81,11 +74,8 @@ namespace ExtractorUI
 
         }
 
-        public ObservableCollection<Menu> Menus
-        {
-            get => _menus;
-            set => SetProperty<ObservableCollection<Menu>>(ref _menus, value);
-        }
+
+
         public int SelectedIndex
         {
             set
@@ -98,65 +88,29 @@ namespace ExtractorUI
             get { return _selectedIndex; }
         }
 
-        public String TextoPesquisado
+        public MenuListViewModel MenuVM
         {
-            set
-            {
-                SetProperty<String>(ref _textoPesquisado, value);
-
-                _menus.Clear();
-                //Inserindo itens filtrados
-                GerarMenus();
-
-            }
-            get => _textoPesquisado;
-
+            get => _menuVM;
         }
-
-
-
-        private void GerarMenus()
-        {
-            foreach (var item in _models)
-            {
-                if (FilterByName(item.DisplayMenu))
-                {
-                    _menus.Add(item.DisplayMenu);
-                }
-            }
-
-        }
-
 
         private IEnumerable<ViewModelObject> GerarModels()
         {
-            ViewModelObject m;
-            ICollection<ViewModelObject> filhos;
-            yield return m = new ContabilViewModel();
+            yield return new ContabilViewModel();
 
-            filhos = m.Filhos;
-            yield return m = new ProcessamentoContabilViewModel();
+
+            yield return new ProcessamentoContabilViewModel();
 
             //Adicionado filhos do menu contabil
-            filhos.Add(m);
-            yield return m = new FiscalViewModel();
+            yield return new FiscalViewModel();
 
+            //Adicionado filhos do menu contabil
+           // yield return new CardViewModel();
 
 
         }
 
 
-        private bool FilterByName(Menu value)
-        {
 
-            if (String.IsNullOrEmpty(_textoPesquisado))
-            {
-                return true;
-            }
-
-            return value.Name.ToLower().Contains(_textoPesquisado);
-
-        }
 
     }
 }

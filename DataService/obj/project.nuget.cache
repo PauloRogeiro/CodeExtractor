@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9SwOam9nW/y77PVJeXmkgjY326BLDgYGu79WUu40RwPTOo0myg1e0323vJiE+r4uaTecZ45XfddoS/lFMF/c2Q==",
+  "dgSpecHash": "MWaKOREWFOgEWqK933qDbDPG0BlDORrmeTR8GqnpYPze7BZfq0tiJOwRcIf7ZQipHorAD8Xel0YvO2DzFBTEGA==",
   "success": true,
   "projectFilePath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\paulo\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.0.0-preview4\\microsoft.toolkit.mvvm.7.0.0-preview4.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\paulo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

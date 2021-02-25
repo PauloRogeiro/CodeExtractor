@@ -6,13 +6,10 @@ using Castle.Facilities.TypedFactory;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using MvvmFramework;
-using Objects;
-using BusinessObjects;
-using DataService;
 
 
 
-namespace ExtractorUI
+namespace app
 {
     public class Bootstrapper : BootstrapperBase
     {
@@ -38,17 +35,11 @@ namespace ExtractorUI
             container = new WindsorContainer();
             container.Kernel.Resolver.AddSubResolver(new AppSettingsConvention());
             container.Register(
-                Component.For<IDataSource<Menu>>()
-                    .ImplementedBy<XMLSerializableDataSource<Menu>>()
-                    .DependsOn(Dependency.OnValue<string>("menus.xml"))
-                     ,
-                Component.For<IMenuRepository>()
-                    .ImplementedBy<MenuRepository>()
-                    .LifestyleTransient()
-                    ,
-                Component.For<IEventAggregator>()
+
+               Component.For<IEventAggregator>()
                     .ImplementedBy<EventAggregator>()
                     .LifestyleSingleton()
+
                     ,
 
                 Component.For<IWindowManager>()
@@ -65,18 +56,11 @@ namespace ExtractorUI
             container = new WindsorContainer();
             container.Kernel.Resolver.AddSubResolver(new AppSettingsConvention());
             container.Register(
-                Component.For<IDataSource<Menu>>()
-                        .ImplementedBy<XMLSerializableDataSource<Menu>>()
-                        .DependsOn(Dependency.OnValue<string>("menus.xml"))
-                ,
-                Component.For<IMenuRepository>()
-                    .ImplementedBy<MenuRepository>()
-                    .LifestyleTransient()
 
-                    ,
                 Component.For<IEventAggregator>()
                     .ImplementedBy<EventAggregator>()
                     .LifestyleSingleton()
+                 
                 );
             RegisterViewModels();
             RegisterViews();

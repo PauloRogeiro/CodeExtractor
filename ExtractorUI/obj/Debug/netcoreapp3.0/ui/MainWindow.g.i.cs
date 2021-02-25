@@ -9,8 +9,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using ExtractorUI.ui;
-using ExtractorViewModels;
+using app.ui;
+using ViewModels;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -34,7 +34,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace ExtractorUI {
+namespace app {
     
     
     /// <summary>
@@ -54,7 +54,7 @@ namespace ExtractorUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExtractorUI;component/ui/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/app;component/ui/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ui\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

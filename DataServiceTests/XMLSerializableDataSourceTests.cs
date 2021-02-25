@@ -17,6 +17,31 @@ namespace DataService.UI.Tests
             Assert.IsTrue(ds != null);
         }
 
+        [TestMethod()]
+        public void CreatWithValueTest()
+        {
+            if (File.Exists("testXML.xml"))
+            {
+                File.Delete("testXML.xml");
+            }
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("<?xml version = \"1.0\" encoding = \"utf - 8\" ?>");
+            sb.AppendLine("<List>");
+            sb.AppendLine("   <String Value = \"a\" />");
+            sb.AppendLine("   <String Value = \"b\" />");
+            sb.AppendLine("   <String Value = \"c\" />");
+            sb.AppendLine("</List>");
+
+            File.AppendAllText("testXML.xml", sb.ToString());
+
+            IDataSource <String> ds = new XMLSerializableDataSource<String>("testXML.xml");
+
+            Assert.IsTrue(ds != null);
+            Assert.IsTrue(ds.GetALL().GetEnumerator().MoveNext());
+
+        }
+
 
         [TestMethod()]
         public void FileCreateText()

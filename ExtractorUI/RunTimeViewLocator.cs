@@ -6,9 +6,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
 
-namespace ExtractorUI
+namespace app
 {
-    public static class RunTimeViewLocator  
+    public static class RunTimeViewLocator
     {
         public static Object GetAutoLocateView(DependencyObject obj)
         {
@@ -20,10 +20,15 @@ namespace ExtractorUI
             obj.SetValue(AutoLocateViewProperty, value);
         }
 
+   
+
         public static readonly DependencyProperty AutoLocateViewProperty =
             DependencyProperty.RegisterAttached("AutoLocateView",
                 typeof(Object), typeof(RunTimeViewLocator),
                 new PropertyMetadata(null, AutoLocateViewChanged));
+
+       
+
 
         private static void AutoLocateViewChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -43,14 +48,14 @@ namespace ExtractorUI
             string viewTypeName = modelType.FullName.Replace("ViewModel", "View");
             var allExportedTypes = new List<Type>();
 
-            allExportedTypes.AddRange( typeof(RunTimeViewLocator).Assembly.GetExportedTypes());
+            allExportedTypes.AddRange(typeof(RunTimeViewLocator).Assembly.GetExportedTypes());
 
             Type viewModelType = allExportedTypes.Single(x => x.FullName.Equals(viewTypeName));
             object viewModel = IoC.GetInstance(viewModelType, null);
             c.Content = viewModel;
         }
 
-   
+
 
 
 

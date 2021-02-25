@@ -1,0 +1,357 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Application.csproj": {}
+  },
+  "projects": {
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj",
+        "projectName": "BusinessObjects",
+        "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj",
+        "projectName": "DataService",
+        "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Application.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj"
+              },
+              "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj": {
+                "projectPath": "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "MaterialDesignThemes.MahApps": {
+              "target": "Package",
+              "version": "[0.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj",
+        "projectName": "ExtractorViewModels",
+        "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\ExtractorViewModels.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtratorViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\BusinessObjects\\BusinessObjects.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\DataService\\DataService.csproj"
+              },
+              "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj": {
+                "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj"
+              },
+              "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj": {
+                "projectPath": "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.0.0-preview4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj",
+        "projectName": "Objects",
+        "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\Objects.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\Objects\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.0.0-preview4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj",
+        "projectName": "MvvmFramework",
+        "projectPath": "C:\\projects\\MVVM-From-A-To-Z-Sources\\Sources\\05-Models-Validation\\MvvmApp\\MvvmFramework\\MvvmFramework.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

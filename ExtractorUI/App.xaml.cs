@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace ExtractorUI
+namespace app
 {
     /// <summary>
     /// Interaction logic for App.xaml

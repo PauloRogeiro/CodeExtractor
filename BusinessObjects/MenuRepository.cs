@@ -10,6 +10,15 @@ namespace BusinessObjects
 
         private IDataSource<Menu> _dataSource;
 
+        public IEnumerable<Menu> Menus
+        {
+            private set { }
+
+            get => _dataSource.GetALL();
+
+        }
+
+
         public MenuRepository(IDataSource<Menu> data)
         {
             _dataSource = data;
