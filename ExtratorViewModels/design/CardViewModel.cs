@@ -16,7 +16,7 @@ namespace app.design
         private String _icone;
         private CardListViewModel _cards;
 
-        private ICommand _remove;
+
 
         public string Descricao
         {
@@ -35,7 +35,8 @@ namespace app.design
             set => _icone = value;
         }
         
-        public ICommand Remove { get => _remove;  }
+
+
 
         public CardViewModel()
         {

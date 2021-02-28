@@ -10,9 +10,10 @@ namespace app
     public class CardViewModel : ViewModelObject
     {
 
-        private string _nome ="";
-        private string _descricao="";
-        private String _icone= "CardTextOutline";
+        private string _nome = "";
+        private string _descricao = "";
+        private String _icone = "CardTextOutline";
+        private ICommand _save;
 
         private CardListViewModel _parentViewModel;
 
@@ -33,15 +34,29 @@ namespace app
             set => SetProperty<String>(ref _icone, value);
         }
         public CardListViewModel ParentViewModel { get => _parentViewModel; }
+      
         
+        public ICommand Save
+        {
+            get => _save;
+            set => _save = value;
+        }
 
         public CardViewModel(CardListViewModel cards)
         {
             _parentViewModel = cards;
+            _save = new RelayCommand(SaveItem);
         }
 
 
-  
+        private void SaveItem() {
+
+            this.Nome = Nome + "save";
+        
+        }
+
+
+
 
     }
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppControl", "ExtractorUI\AppControl.csproj", "{2A690BDE-8BE8-4346-B574-5F996061D3A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ctrl", "ExtractorUI\Ctrl.csproj", "{2A690BDE-8BE8-4346-B574-5F996061D3A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ExtratorViewModels\ViewModels.csproj", "{F3FDBC43-4F4F-4D7D-BE40-CE64F12E183E}"
 EndProject

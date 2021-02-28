@@ -98,7 +98,7 @@ namespace app {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppControl;component/mainwindowview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Ctrl;component/mainwindowview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindowView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

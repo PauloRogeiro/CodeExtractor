@@ -1,0 +1,20 @@
+﻿Ctrl
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\
+app
+none
+false
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\App.xaml
+5-937803546
+
+152135933192
+2091783533820
+MainWindowView.xaml;Themes\StateCard.xaml;User controls\CardListView.xaml;User controls\MenuListView.xaml;User controls\MenuView.xaml;
+
+False
+

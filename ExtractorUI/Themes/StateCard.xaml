@@ -100,7 +100,7 @@
 
     <ControlTemplate
         x:Key="CardTemplate"
-        TargetType="{x:Type local:AppCard}">
+        TargetType="{x:Type local:StateCard}">
 
         <Border
             BorderThickness="1"
@@ -117,7 +117,7 @@
                     Height="18"
                     x:Name="CloseButton"
                     Background="{x:Null}"
-                    Command="{Binding Remove, RelativeSource={RelativeSource AncestorType=local:AppCard}}"
+                    Command="{Binding Remove, RelativeSource={RelativeSource AncestorType=local:StateCard}}"
                     HorizontalAlignment="Right">
 
                     <md:PackIcon
@@ -177,7 +177,7 @@
 
                             <ContentPresenter
                                 x:Name="ContentPresenter"
-                                Content="{TemplateBinding CardView}"
+                                Content="{TemplateBinding ViewState}"
                                 ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
                                 ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
                                 ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
@@ -185,7 +185,8 @@
 
 
                             <Button
-                                Style="{StaticResource MaterialDesignFlatButton}"
+                                    x:Name="EditButton"
+                                    Style="{StaticResource MaterialDesignFlatButton}"
                                 Command="{x:Static md:Flipper.FlipCommand}"
                                 Margin="0 4 0 0">
                                 Editar
@@ -218,22 +219,24 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Background="{StaticResource PrimaryBackGround}">
-                            <StackPanel
+                            <StackPanel 
+                                
                                 Margin="5"
                                 Orientation="Vertical">
-
+                                
 
                                 <ContentPresenter
                                     x:Name="BackContentPresenter"
-                                    Content="{TemplateBinding CardEditView}"
+                                    Content="{TemplateBinding EditState}"
                                     ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
                                     ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
                                     ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
                                 </ContentPresenter>
 
 
-                                <Button
-                                    Style="{StaticResource MaterialDesignFlatButton}"
+                                    <Button 
+                                    x:Name="SaveButton"
+                                        Style="{StaticResource MaterialDesignFlatButton}"
                                     Command="{x:Static md:Flipper.FlipCommand}"
                                     HorizontalAlignment="Center"
                                     Margin="0 4 0 0">
@@ -250,7 +253,11 @@
             </md:Flipper>
             </StackPanel>
         </Border>
+       
         <ControlTemplate.Triggers>
+            
+            
+            
 
             <Trigger Property="IsMouseOver" Value="True" >
                 <Setter Property="Selected" Value="{Binding RelativeSource={RelativeSource Self}}" />
@@ -302,10 +309,13 @@
 
 
     <Style
-        TargetType="{x:Type local:AppCard}">
+        TargetType="{x:Type local:StateCard}">
         <Setter
             Property="Template"
-            Value="{StaticResource CardTemplate}" />
+            Value="{StaticResource CardTemplate}" >
+
+
+        </Setter>
         
        
     </Style>

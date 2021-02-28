@@ -6445,9 +6445,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\AppControl.csproj",
-      "projectName": "AppControl",
-      "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\AppControl.csproj",
+      "projectUniqueName": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Ctrl.csproj",
+      "projectName": "Ctrl",
+      "projectPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Ctrl.csproj",
       "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
       "outputPath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\obj\\",
       "projectStyle": "PackageReference",

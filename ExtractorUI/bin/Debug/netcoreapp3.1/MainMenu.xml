@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <List>
   <Menu Nome ="Menu1"  Texto ="Menu1" Icone="AccountOutline" View ="CardListView"  />
-  <Menu Nome ="Menu2"  Texto ="Menu2" Icone="AccountOutline" View ="ContabilView" />
-  <Menu Nome ="Menu3"  Texto ="Menu3" View="ProcessamentoContabilView" Icone="AccountOutline" />
+  <Menu Nome ="Menu2"  Texto ="Menu2" Icone="AccountOutline" View ="CardListView" />
+  <Menu Nome ="Menu3"  Texto ="Menu3"  Icone="AccountOutline" View="CardListView" />
+
+       
 </List>

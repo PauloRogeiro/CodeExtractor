@@ -42,7 +42,7 @@
 
    
 
-                            <ItemsControl
+                          <ItemsControl
                             x:Name="ItemsControl"
                             ItemsSource="{Binding Cards}">
 
@@ -70,12 +70,13 @@
 
                                 <DataTemplate>
 
-                                    <local:AppCard
+                                    <local:StateCard
+                                    OnSave="{Binding Path=Save}"
                                         ListContainer="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}}">
 
 
 
-                                        <local:AppCard.CardView>
+                                        <local:StateCard.ViewState>
                                             <ContentControl>
                                                 <StackPanel>
 
@@ -100,9 +101,9 @@
 
 
                                             </ContentControl>
-                                        </local:AppCard.CardView>
+                                        </local:StateCard.ViewState>
 
-                                        <local:AppCard.CardEditView>
+                                    <local:StateCard.EditState>
                                             <ContentControl>
 
                                                 <StackPanel
@@ -139,10 +140,10 @@
                                             </ContentControl>
 
 
-                                        </local:AppCard.CardEditView>
+                                        </local:StateCard.EditState>
 
 
-                                    </local:AppCard>
+                                    </local:StateCard>
 
 
 

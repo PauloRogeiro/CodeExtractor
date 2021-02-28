@@ -7,51 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="CardListView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ContabilView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="FiscalView.xaml.cs">
+    <Compile Update="User controls\CardListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MenuListView.xaml.cs">
+    <Compile Update="User controls\MenuListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MenuView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ProcessamentoContabilView.xaml.cs">
+    <Compile Update="User controls\MenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="CardListView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ContabilView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="FiscalView.xaml">
+    <Page Update="User controls\CardListView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MenuListView.xaml">
+    <Page Update="User controls\MenuListView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MenuView.xaml">
+    <Page Update="User controls\MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ProcessamentoContabilView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\AppCard.xaml">
+    <Page Update="Themes\StateCard.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

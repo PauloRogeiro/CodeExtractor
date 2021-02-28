@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CdteFjKUm92em4XqY1HSRC4pogaHGF9Dq4aoD+nSI9xvZkD2YKjw3WUiO9tAzPXp1v/vE21XY43nZMJrVpXVfA==",
+  "dgSpecHash": "+RIMS0ln0Ua/RYb7nwqm7P2PPydtpYMipAMxkmQ7rqJ4xtm7nNLEcNOBmnvidlvMvPLqI1EzAjvXtdDXNA05Aw==",
   "success": true,
-  "projectFilePath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\AppControl.csproj",
+  "projectFilePath": "C:\\projects\\CodeExtractor\\ExtractorUI\\ExtractorUI\\Ctrl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\castle.windsor\\5.1.1\\castle.windsor.5.1.1.nupkg.sha512",

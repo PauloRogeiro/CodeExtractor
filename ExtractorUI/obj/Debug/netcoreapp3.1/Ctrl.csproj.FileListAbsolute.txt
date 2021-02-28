@@ -1,0 +1,61 @@
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csprojAssemblyReference.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\MainWindowView.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\CardListView.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\MenuListView.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\MenuView.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\App.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl_MarkupCompile.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl_MarkupCompile.lref
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\App.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\MainWindowView.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\MenuListView.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\MenuView.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\CardListView.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.exe
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MainMenu.xml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.dll.config
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.deps.json
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.runtimeconfig.json
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.runtimeconfig.dev.json
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Ctrl.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Castle.Windsor.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\ControlzEx.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MahApps.Metro.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MaterialDesignThemes.MahApps.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Microsoft.Toolkit.Mvvm.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Data.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MvvmFramework.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Utils.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\MvvmFramework.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Data.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\Utils.pdb
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Themes\StateCard.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.g.resources
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\app.Properties.Resources.resources
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csproj.GenerateResource.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.AssemblyInfoInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.AssemblyInfo.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csproj.CoreCompileInputs.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csproj.CopyComplete
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.genruntimeconfig.cache

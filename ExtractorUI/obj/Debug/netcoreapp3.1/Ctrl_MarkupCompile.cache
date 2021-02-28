@@ -1,4 +1,4 @@
-﻿AppControl
+﻿Ctrl
 
 
 winexe
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\App.xaml
-81553336137
+5-937803546
 
-16-590036385
+131999774659
 2091783533820
-CardListView.xaml;ContabilView.xaml;FiscalView.xaml;MainWindowView.xaml;MenuListView.xaml;MenuView.xaml;ProcessamentoContabilView.xaml;Themes\AppCard.xaml;
+MainWindowView.xaml;Themes\StateCard.xaml;User controls\CardListView.xaml;User controls\MenuListView.xaml;User controls\MenuView.xaml;
 
 False
 

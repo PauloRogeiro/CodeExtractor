@@ -84,7 +84,7 @@
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
-                    Source="Themes/AppCard.xaml" />
+                    Source="Themes/StateCard.xaml" />
 
                 <ResourceDictionary>
 

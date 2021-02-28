@@ -28,7 +28,7 @@ namespace app
 
             _menuVM = menus;
             _menuVM.PropertyChanged += MenuChanged;
-            _models = new ObservableCollection<ViewModelObject>(GerarModels());
+            _models = new ObservableCollection<ViewModelObject>();
 
 
         }
@@ -93,23 +93,7 @@ namespace app
             get => _menuVM;
         }
 
-        private IEnumerable<ViewModelObject> GerarModels()
-        {
-            yield return new ContabilViewModel();
-
-
-            yield return new ProcessamentoContabilViewModel();
-
-            //Adicionado filhos do menu contabil
-            yield return new FiscalViewModel();
-
-            //Adicionado filhos do menu contabil
-           // yield return new CardViewModel();
-
-
-        }
-
-
+       
 
 
     }
