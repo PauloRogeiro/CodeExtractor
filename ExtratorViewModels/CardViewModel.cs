@@ -16,8 +16,6 @@ namespace app
 
         private CardListViewModel _parentViewModel;
 
-        private ICommand _remove;
-
         public string Descricao
         {
             get => _descricao;
@@ -36,21 +34,14 @@ namespace app
         }
         public CardListViewModel ParentViewModel { get => _parentViewModel; }
         
-        public ICommand Remove { get => _remove;  }
 
         public CardViewModel(CardListViewModel cards)
         {
             _parentViewModel = cards;
-            _remove = new RelayCommand(RemoveCard);
         }
 
 
-        private void RemoveCard()
-        {
-
-            _parentViewModel.RemoveCard(this);
-        }
-
+  
 
     }
 

@@ -1,69 +1,241 @@
-﻿<UserControl x:Class="app.CardListView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:app"
+﻿<UserControl
+    x:Class="app.CardListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:app"
+    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+    x:Name="UserControl"
     xmlns:des="clr-namespace:app.design;assembly=ViewModels"
-    mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+    mc:Ignorable="d"
+    DataContext="{Binding DataContext.SelectedModel, RelativeSource={RelativeSource AncestorType=Window}}"
+    d:DesignHeight="450" d:DesignWidth="800">
 
-        <Grid
-            d:DataContext="{d:DesignInstance des:CardListViewModel, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+        <ControlTemplate
+            x:Key="CardList"
+            TargetType="ContentControl">
+            <Grid x:Name="Root"
+                d:DataContext="{d:DesignInstance des:CardListViewModel, IsDesignTimeCreatable=True}">
 
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                 <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*"></ColumnDefinition>
 
-            <ScrollViewer MinWidth="200" MinHeight="250"
-                VerticalScrollBarVisibility="Auto">
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
 
-                <ListView
+                    <RowDefinition
+                        Height="*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+
+                  <ListView
+                        Name="MainListView"
+                        Grid.Row="0"
+                        MinWidth="200"
+                        MinHeight="250"
+                        Grid.Column="0">
+
+   
+
+                            <ItemsControl
+                            x:Name="ItemsControl"
+                            ItemsSource="{Binding Cards}">
+
+                            <ItemsControl.ItemsPanel>
+
+                                <ItemsPanelTemplate>
+                                    <WrapPanel
+                                       Width="{Binding (FrameworkElement.ActualWidth),
+                                                        RelativeSource={RelativeSource 
+                                                        AncestorType=ScrollContentPresenter}}"
+                                       ItemWidth="{Binding (ListView.View).ItemWidth,
+                                                        RelativeSource={RelativeSource AncestorType=ListView}}"
+                                       MinWidth="{Binding (ListView.View).ItemWidth,
+                                                        RelativeSource={RelativeSource AncestorType=ListView}}"
+                                       ItemHeight="{Binding (ListView.View).ItemHeight,
+                                                        RelativeSource={RelativeSource AncestorType=ListView}}" />
+
+                                </ItemsPanelTemplate>
+
+
+                            </ItemsControl.ItemsPanel>
+
+
+                            <ItemsControl.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <local:AppCard
+                                        ListContainer="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}}">
+
+
+
+                                        <local:AppCard.CardView>
+                                            <ContentControl>
+                                                <StackPanel>
+
+                                                    <TextBlock
+                                                        HorizontalAlignment="Center"
+                                                        Text="Nome" />
+
+                                                    <TextBlock
+                                                        HorizontalAlignment="Center"
+                                                        Text="{Binding Path=Nome}" />
+
+                                                    <TextBlock
+                                                        HorizontalAlignment="Center"
+                                                        Text="Descrição" />
+
+                                                    <TextBlock
+                                                        HorizontalAlignment="Center"
+                                                        Text="{Binding Path=Descricao}" />
+
+                                                </StackPanel>
+
+
+
+                                            </ContentControl>
+                                        </local:AppCard.CardView>
+
+                                        <local:AppCard.CardEditView>
+                                            <ContentControl>
+
+                                                <StackPanel
+                                                    Margin="5"
+                                                    Orientation="Vertical">
+
+                                                    <TextBlock
+                                                        Text="Nome"
+                                                        HorizontalAlignment="Left" />
+
+                                                    <TextBox
+                                                        Text="{Binding Path=Nome}"
+                                                        md:HintAssist.Hint="Nome"
+                                                        md:HintAssist.IsFloating="True"
+                                                        HorizontalAlignment="Stretch"
+                                                        Margin="0 12 0 0" />
+
+                                                    <TextBlock
+                                                        Text="Descrição"
+                                                        HorizontalAlignment="Left" />
+
+                                                    <TextBox
+                                                        Text="{Binding Path=Descricao}"
+                                                        md:HintAssist.Hint="Descricao"
+                                                        md:HintAssist.IsFloating="True"
+                                                        HorizontalAlignment="Stretch"
+                                                        Margin="0 12 0 0" />
+
+
+                                                </StackPanel>
+
+
+
+                                            </ContentControl>
+
+
+                                        </local:AppCard.CardEditView>
+
+
+                                    </local:AppCard>
+
+
+
+                                </DataTemplate>
+
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+
+
+
+                    </ListView>
+     
+
+                <Button
                     Grid.Row="0"
-                    Grid.Column="0"
-                    ItemsSource="{Binding Path=SelectedModel.Cards}">
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    Command="{Binding Add}"
+                    ToolTip="Incluir novo"
+                    x:Name="AddButton"
+                    Width="50"
+                    Height="50"
+                    Margin="0,0,50,50"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Background="OrangeRed">
+                    <md:PackIcon
+                        Kind="PlusThick" />
+                </Button>
 
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel
-                            
-                            Width="{Binding (FrameworkElement.ActualWidth),
-                   RelativeSource={RelativeSource 
-                                   AncestorType=ScrollContentPresenter}}"
-                            ItemWidth="{Binding (ListView.View).ItemWidth,
-                   RelativeSource={RelativeSource AncestorType=ListView}}"
-                            MinWidth="{Binding (ListView.View).ItemWidth,
-                   RelativeSource={RelativeSource AncestorType=ListView}}"
-                            ItemHeight="{Binding (ListView.View).ItemHeight,
-                   RelativeSource={RelativeSource AncestorType=ListView}}" />
-                    </ItemsPanelTemplate>
+            </Grid>
+            <ControlTemplate.Triggers>
+            <EventTrigger
+                RoutedEvent="MouseEnter">
 
-                </ListView.ItemsPanel>
-                    
+                <BeginStoryboard>
+                    <Storyboard>
 
-                    
-                    <ItemsControl.ItemTemplate>
 
-                    
-                        <DataTemplate>
-              
-                            <local:CardView/>
-                
-                    </DataTemplate>
-                   
+                        <ColorAnimation
+                            To="LightBlue"
+                            Duration="0:0:0.3"
+                            Storyboard.TargetProperty="Background.Color"
+                            Storyboard.TargetName="AddButton" />
 
-                </ItemsControl.ItemTemplate>
 
-            </ListView>
+                    </Storyboard>
+
+                </BeginStoryboard>
+
+            </EventTrigger>
+
+            <EventTrigger
+                RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+
+                        <ColorAnimation
+                            To="OrangeRed"
+                            Duration="0:0:0.3"
+                            Storyboard.TargetProperty="Background.Color"
+                            Storyboard.TargetName="AddButton" />
+
+
+                    </Storyboard>
+
+                </BeginStoryboard>
+
+            </EventTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
         
+        <Style
+            x:Key="CardStyle"
+            x:Name="CardStyle"
+            TargetType="{x:Type ContentControl}">
+            <Setter
+                Property="Template"
+                Value="{StaticResource CardList}" />
+            
+            
 
-        </ScrollViewer>
+
+        </Style>
 
 
-        </Grid>
-  
+        
+    </UserControl.Resources>
+
+
+
+    <ContentControl
+        Style="{StaticResource CardStyle}" />
+    
 </UserControl>
+

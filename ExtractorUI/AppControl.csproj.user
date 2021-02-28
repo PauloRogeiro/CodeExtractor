@@ -10,9 +10,6 @@
     <Compile Update="CardListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CardView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="ContabilView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,9 +33,6 @@
     <Page Update="CardListView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="CardView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="ContabilView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -55,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProcessamentoContabilView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AppCard.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -9,14 +9,13 @@
 
 
         <ResourceDictionary>
-
             <Color
                 x:Key="DarkColor">#005b9f</Color>
             <Color
                 x:Key="MidColor">#0288d1</Color>
             <Color
                 x:Key="LightColor">#5eb8ff</Color>
-            
+
             <Color
                 x:Key="DarkColorText">#ffff</Color>
             <Color
@@ -82,25 +81,38 @@
             <SolidColorBrush
                 x:Key="AccentDarkForeGround"
                 Color="{StaticResource AccentDarkText}" />
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="Themes/AppCard.xaml" />
+
+                <ResourceDictionary>
+
+               
 
 
 
-      
-                <ResourceDictionary.MergedDictionaries>
-                    <ResourceDictionary
-                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
-                    <ResourceDictionary
-                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
-                    <ResourceDictionary
-                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
-                    <ResourceDictionary
-                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
-                    <ResourceDictionary
-                        Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
-                </ResourceDictionary.MergedDictionaries>
-        
 
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary
+                            Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                        <ResourceDictionary
+                            Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                        <ResourceDictionary
+                            Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                        <ResourceDictionary
+                            Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                        <ResourceDictionary
+                            Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+
+
+                </ResourceDictionary>
+
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+
+
        
 
     </Application.Resources>

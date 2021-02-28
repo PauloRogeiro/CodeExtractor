@@ -60,7 +60,8 @@ C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\AppCon
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\AppControl.pdb
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\AppControl.genruntimeconfig.cache
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\bin\Debug\netcoreapp3.1\AppControl.dll.config
-C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\CardView.g.cs
-C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\CardView.baml
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\CardListView.g.cs
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\CardListView.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Themes\AppCard.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\app.Properties.Resources.resources
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\AppControl.csproj.GenerateResource.cache

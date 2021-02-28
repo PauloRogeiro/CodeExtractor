@@ -12,7 +12,7 @@ namespace app
 
 
         private ObservableCollection<CardViewModel> _cards;
-       
+
 
         private ICommand _add;
 
@@ -23,6 +23,8 @@ namespace app
             _add = new RelayCommand(AddNew);
             _cards = new ObservableCollection<CardViewModel>();
             _cards.Add(new CardViewModel(this) { Nome = "add", Descricao="", Icone= "PlusThick" });
+            _cards.Add( new CardViewModel(this) { Nome = "card1", Descricao = "descrição muito longa" } );
+            _cards.Add(new CardViewModel(this) { Nome = "card1", Descricao = "descrição curta" });
 
         } 
 
@@ -38,13 +40,10 @@ namespace app
         public void AddNew()
         {
  
-            _cards.Insert(_cards.Count-1, new CardViewModel(this));
+            _cards.Add( new CardViewModel(this));
         }
 
-        public void RemoveCard(CardViewModel card) {
 
-            _cards.Remove(card);
-        }
 
       
     }

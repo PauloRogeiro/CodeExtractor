@@ -65,7 +65,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
                 <Button
-                    Width="36"
+                    Width="24"
                     Padding="0"
                     Name="BtnMinimize"
                     Background="{x:Null}"
@@ -118,6 +118,7 @@
                 <StackPanel
                     VerticalAlignment="Center">
 
+                    
                     <StackPanel
                         Grid.Column="1"
                         Grid.Row="0"
@@ -268,13 +269,17 @@
             Grid.Column="1"
             Background="White"
             Grid.Row="2">
+            
             <ScrollViewer
                 x:Name="MainScrollViewer"
                 md:ScrollViewerAssist.IsAutoHideEnabled="True">
 
                 <ContentControl
-                    Margin="10,10,0,0"
-                    mLocal:RunTimeViewLocator.AutoLocateView="{ Binding SelectedModel}" />
+                    mLocal:RunTimeViewLocator.AutoLocateView="{Binding SelectedModel}">
+
+                </ContentControl>
+
+
             </ScrollViewer>
         </Border>
 

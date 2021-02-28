@@ -53,7 +53,7 @@ namespace app {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppControl;V1.0.0.0;component/processamentocontabilview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppControl;component/processamentocontabilview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ProcessamentoContabilView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
