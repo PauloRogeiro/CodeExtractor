@@ -7,10 +7,10 @@ namespace app
     public class Menu
     {
 
-        public String Nome { get; set; }
-        public String Texto { get; set; }
+        
+        public String Text { get; set; }
         public String Icone { get; set; }
-        public String View { get; set; }
+        public String Action { get; set; }
 
     }
 }

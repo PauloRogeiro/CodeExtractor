@@ -59,3 +59,9 @@ C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.A
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csproj.CoreCompileInputs.cache
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.csproj.CopyComplete
 C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\Ctrl.genruntimeconfig.cache
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\FloatingButton.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\FloatingButton.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\TopBar.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\TopBar.baml
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\ToolBar.g.cs
+C:\projects\CodeExtractor\ExtractorUI\ExtractorUI\obj\Debug\netcoreapp3.1\User controls\ToolBar.baml

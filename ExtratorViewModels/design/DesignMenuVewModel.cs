@@ -8,10 +8,10 @@ namespace app.design
     public class DesignMenuVewModel
     {
 
-        public readonly String Nome = "Contabil";
-        public readonly String Texto = "Contabil";
+
+        public readonly String Text = "Contabil";
         public readonly String Icone = "AccountCircle"; 
-        public readonly String View = "ContabilView";
+        public readonly String Action = "ContabilView";
 
 
     public DesignMenuVewModel()
@@ -21,7 +21,7 @@ namespace app.design
 
         public Menu GetMenu() {
 
-            return new Menu() { Nome = this.Nome, Icone = this.Icone, Texto = this.Texto, View = this.View };
+            return new Menu() {  Icone = this.Icone, Text = this.Text, Action = this.Action };
         
         }
 

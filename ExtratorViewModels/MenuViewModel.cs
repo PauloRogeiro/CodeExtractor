@@ -11,29 +11,28 @@ namespace app
     public class MenuViewModel : ObservableObject
     {
 
-        private String _nome;
+
         private String _Texto;
         private String _Icone;
-        private String _view;
+        private String _action;
         private MenuListViewModel _menuList;
 
         //COmmands
         private ICommand _selected; 
 
-        public string Nome { get => _nome; set => _nome = value; }
-        public string Texto { get => _Texto; set => _Texto = value; }
+        public string Text { get => _Texto; set => _Texto = value; }
         public string Icone { get => _Icone; set => _Icone = value; }
-        public string View { get => _view; set => _view = value; }
+        public string Action { get => _action; set => _action = value; }
 
         private MenuListViewModel _menuListViewModel;
 
 
-        public MenuViewModel(MenuListViewModel menuList, string nome = null, string texto = null, string icone = null, string view = null)
+        public MenuViewModel(MenuListViewModel menuList,  string text = null, string icone = null, string action = null)
         {
-            _nome = nome;
-            _Texto = texto;
+      
+            _Texto = text;
             _Icone = icone;
-            _view = view;
+            _action = action;
             _menuList = menuList;
             _selected = new RelayCommand(SetSelected);
         }

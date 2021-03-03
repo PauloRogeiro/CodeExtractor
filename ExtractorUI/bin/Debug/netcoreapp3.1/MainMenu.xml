@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <List>
-  <Menu Nome ="Menu1"  Texto ="Menu1" Icone="AccountOutline" View ="CardListView"  />
-  <Menu Nome ="Menu2"  Texto ="Menu2" Icone="AccountOutline" View ="CardListView" />
-  <Menu Nome ="Menu3"  Texto ="Menu3"  Icone="AccountOutline" View="CardListView" />
-
+  <Menu Text ="Home" Icone="FolderOpenOutline" Action =""  />
+  <Menu Text ="Home.Menu1" Icone="FolderOpenOutline" Action ="CardListView" />
+  <Menu Text ="Agrupamento"  Icone="FolderOpenOutline" Action="" />
+  <Menu Text ="Agrupamento.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Text ="AgrupamentoLongo"  Icone="FolderOpenOutline" Action="" />
+  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
        
 </List>

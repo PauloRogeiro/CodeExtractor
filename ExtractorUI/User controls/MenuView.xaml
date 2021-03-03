@@ -5,104 +5,229 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:app"
+    xmlns:res="clr-namespace:app.User_controls"
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
     mc:Ignorable="d"
-    xmlns:model="clr-namespace:app.design;assembly=ViewModels"
-    d:DataContext="{d:DesignInstance model:DesignMenuVewModel, IsDesignTimeCreatable=True}"
-    Height="50"
-    Width="200"
+
+    x:Name="this"
     d:DesignHeight="35"
     d:DesignWidth="200">
 
     <UserControl.Resources >
 
-        
-        <Style x:Key="contentStyle"
-            TargetType="{x:Type ContentControl}">
 
+        <Style x:Key="IconStyle" TargetType="{x:Type md:PackIcon}" >
 
             
-            <Setter Property="Template" >
-            <Setter.Value>
-                <ControlTemplate  TargetType="{x:Type ContentControl}">
+            <Style.Triggers>
+                <DataTrigger
+                    Binding="{Binding Action, ElementName=this, Converter={x:Static res:StringIsEmptyToBooleanConverter.Instance}}"
+                    Value="True">
 
-                        <Button BorderBrush="{x:Null}"
-                               Height="35" VerticalAlignment="Stretch" 
-                                HorizontalAlignment="Stretch"
-                                Foreground="{x:Null}" 
-                                Padding="0"
-                                Margin="0"
-                                MinWidth="200"
-                                MaxWidth="200"
-                                Command="{Binding Selected}"
-                                Background="{x:Null}" >
-                            <Grid MinWidth="200"
-                                x:Name="container"
-                                           Background="White">
+                    <Setter
+                        Property="Visibility"
+                        Value="Collapsed"></Setter>
+
+                </DataTrigger>
+            </Style.Triggers>
+            
+        </Style>
+
+        <!--estilo do texto -->
+        <Style
+            x:Key="TextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="Cursor"
+                Value="Hand" />
+
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+
+
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource AccentLightForeGround}" />
+            <Setter
+                Property="FontFamily"
+                Value="Segoe UI Semibold" />
+            <Setter
+                Property="FontSize"
+                Value="12" />
+
+            <Style.Triggers>
+
+
+                <MultiDataTrigger>
+
+                    <MultiDataTrigger.Conditions>
+
+                        <Condition
+                            Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=ToggleButton}}"
+                            Value="True">
+                        </Condition>
+
+                        <Condition
+                            Binding="{Binding Action, ElementName=this, Converter={x:Static res:StringIsEmptyToBooleanConverter.Instance}}"
+                            Value="False">
+                        </Condition>
+
+                    </MultiDataTrigger.Conditions>
+                    <Setter
+                        Property="Foreground"
+                        Value="{StaticResource DarkBackGround}"></Setter>
+
+                </MultiDataTrigger>
+
+                
+                
+                <!--Ajusta menu agrupador-->
+                <DataTrigger
+                    Binding="{Binding Action, ElementName=this, Converter={x:Static res:StringIsEmptyToBooleanConverter.Instance}}"
+                    Value="True">
+
+                    <Setter
+                        Property="Foreground"
+                        Value="Gray" />
+
+                    <Setter
+                        Property="FontFamily"
+                        Value="Segoe UI Bold" />
+
+                    <Setter
+                        Property="FontSize"
+                        Value="12" />
+
+                </DataTrigger>
+
+
+                <!--Ajusta menu detalhe-->
+                <DataTrigger
+                    Binding="{Binding Action, ElementName=this, Converter={x:Static res:StringIsEmptyToBooleanConverter.Instance}}"
+                    Value="False">
+                   
+                    <Setter
+                        Property="Margin"
+                        Value="10,0,0,0" />
+
+                </DataTrigger>
+
+
+                <DataTrigger
+                    Binding="{Binding IsChecked, RelativeSource={RelativeSource AncestorType=ToggleButton}}"
+                    Value="True">
+
+                    <Setter
+                        Property="Foreground"
+                        Value="{StaticResource DarkBackGround}"></Setter>
+
+                </DataTrigger>
+
+
+
+
+
+
+            </Style.Triggers>
+
+
+        </Style>
+
+
+        <!--estilo do botao -->
+        <Style
+            x:Key="MenuButtonStyle"
+            TargetType="{x:Type ToggleButton}">
+
+            <Setter
+                Property="Background"
+                Value="Transparent" />
+
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+
+            <Setter
+                Property="HorizontalAlignment"
+                Value="Stretch" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="Center" />
+
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+           
+            <Setter
+                Property="Margin"
+                Value="{Binding TextMargin, ElementName=this}" />
+
+            <Setter
+                Property="Command"
+                Value="{Binding Command, ElementName=this}" />
+
+            <Setter
+                Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate
+                        
+                        TargetType="{x:Type ToggleButton}">
+
+                        
+                        <Border
+                            Height="{TemplateBinding Height}"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+
+                            <Grid
+                                x:Name="container">
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="35" ></RowDefinition>
+                                    <RowDefinition
+                                        Height="*"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                
+
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition
                                         Width="auto" />
-                                    <ColumnDefinition
-                                        Width="auto" />
+
                                     <ColumnDefinition
                                         Width="*" />
-                                    
+
 
                                 </Grid.ColumnDefinitions>
 
-                                <md:ColorZone
-                                    Grid.Column="0"
-                                    HorizontalAlignment="Stretch"
-                                    VerticalAlignment="Stretch"
-                                    Background="{StaticResource AccentDarkBackGround}">
-
-                                    <Border
-                                        HorizontalAlignment="Left"
-                                        Width="4">
-
-                                    </Border>
-                                </md:ColorZone>
-
-
 
                                 <Border
-                                    Grid.Column="1">
+                                    Height="14"
+                                    Grid.Column="0">
 
-                                    <Border
-                                        Background="{x:Null}"
-                                        Width="{Binding ActualHeight , RelativeSource={RelativeSource self}}"
-                                        CornerRadius="{ Binding ActualHeight , RelativeSource={RelativeSource self}}">
-
-
-                                        <md:PackIcon
-                                            VerticalAlignment="Center"
-                                            Kind="{Binding Path=Icone}"
-                                            Background="{x:Null}"
-                                            Foreground="{StaticResource AccentLightForeGround}"
-                                            Width="{Binding ActualHeight , RelativeSource={RelativeSource AncestorType=Border}}"
-                                            Height="{Binding ActualHeight , RelativeSource={RelativeSource AncestorType=Border}}" />
-
-
-
-                                    </Border>
+                                    <md:PackIcon
+                                        Kind="{Binding  Icon,ElementName=this}"
+                                        Style="{StaticResource IconStyle}"
+                                        x:Name="TextIcon"                                        
+                                        Background="{TemplateBinding Background}"
+                                        Foreground="{StaticResource DarkBackGround}"
+                                        Width="{Binding ActualHeight , RelativeSource={RelativeSource AncestorType=Border}}"
+                                        Height="{Binding ActualHeight , RelativeSource={RelativeSource AncestorType=Border}}" />
 
 
                                 </Border>
 
 
                                 <Border
-                                    Grid.Column="2">
+                                    Grid.Column="1">
                                     <TextBlock
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center"
-                                        d:Text="Texto exemplo de menu"
-                                        Foreground="{StaticResource AccentLightForeGround}"
-                                        Text="{Binding Path=Texto}">
+                                        Style="{StaticResource TextBlockStyle}"
+                                        d:Text="Menu text"
+                                        Text="{Binding MenuText, ElementName=this}">
 
                                     </TextBlock>
                                 </Border>
@@ -111,67 +236,44 @@
 
                             </Grid>
 
-                            
-                        </Button>
-                        <ControlTemplate.Triggers>
+
+                        </Border>
 
 
-                            <EventTrigger
-                                RoutedEvent="MouseEnter">
 
-                                <BeginStoryboard>
-                                    <Storyboard>
-
-                                        <ColorAnimation
-                                            Duration="0:0:0.3"
-                                            To="LightBlue"
-                                            Storyboard.TargetName="container"
-                                            Storyboard.TargetProperty="Background.Color" />
-
-                                    </Storyboard>
-                                </BeginStoryboard>
-
-
-                            </EventTrigger>
-
-                            <EventTrigger
-                                RoutedEvent="MouseLeave">
-
-                                <BeginStoryboard>
-                                    <Storyboard>
-
-                                        <ColorAnimation
-                                            Duration="0:0:0.3"
-                                            To="White"
-                                            Storyboard.TargetName="container"
-                                            Storyboard.TargetProperty="Background.Color" />
-
-                                    </Storyboard>
-                                </BeginStoryboard>
-
-
-                            </EventTrigger>
-
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
-                
-
-            </Setter.Value>
 
 
-        </Setter>
+                </Setter.Value>
 
 
-           
+            </Setter>
+
+
+
 
         </Style>
 
-
+       
+       
 
 
     </UserControl.Resources>
 
-    <ContentControl  Style="{StaticResource contentStyle}"></ContentControl>
+
+
+
+
+
+    <RadioButton
+      
+        Style="{StaticResource MenuButtonStyle}"
+        GroupName="{Binding GroupName, ElementName=this}">
+  
+        </RadioButton>
+        
+        
+   
         
 
 

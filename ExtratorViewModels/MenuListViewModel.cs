@@ -36,7 +36,7 @@ namespace app
             {
 
                 SetProperty<String>(ref _FilterText, value);
-                List<MenuViewModel> filteredList = _allMenus.FindAll((x) => String.IsNullOrEmpty(_FilterText) || x.Nome.Contains(_FilterText, StringComparison.OrdinalIgnoreCase));
+                List<MenuViewModel> filteredList = _allMenus.FindAll((x) => String.IsNullOrEmpty(_FilterText) || x.Text.Contains(_FilterText, StringComparison.OrdinalIgnoreCase));
                 Menus = filteredList;
 
             }
@@ -61,7 +61,7 @@ namespace app
 
             foreach (var item in menus)
             {
-                _menus.Add(new MenuViewModel(this, item.Nome, item.Texto,item.Icone,item.View ) );
+                _menus.Add(new MenuViewModel(this, item.Text,item.Icone,item.Action ) );
             }
 
             _allMenus = _menus;

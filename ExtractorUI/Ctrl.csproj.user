@@ -13,10 +13,19 @@
     <Compile Update="MainWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="User controls\FloatingButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="User controls\MenuListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="User controls\MenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User controls\ToolBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User controls\TopBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,6 +36,9 @@
     <Page Update="MainWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="User controls\FloatingButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="User controls\MenuListView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +46,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\StateCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User controls\ToolBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User controls\TopBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

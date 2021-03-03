@@ -46,7 +46,7 @@ namespace app
                 return;
             }
 
-            String viewName = this.GetType().Namespace + "." + changedMenu.View.ToString().Replace("View", "ViewModel");
+            String viewName = this.GetType().Namespace + "." + changedMenu.Action.ToString().Replace("View", "ViewModel");
             SelectedModel = IoC.Get<ViewModelObject>(viewName);
 
 

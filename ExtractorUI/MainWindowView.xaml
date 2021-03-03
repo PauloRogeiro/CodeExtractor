@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mLocal="clr-namespace:app"
+    xmlns:ctrl="clr-namespace:app.User_controls"
     xmlns:framework="clr-namespace:MvvmFramework;assembly=MvvmFramework"
     xmlns:model="clr-namespace:app;assembly=ViewModels"
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -39,77 +40,32 @@
         Cursor="Hand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition
-                MaxWidth="200"
-                Width="0.3*"></ColumnDefinition>
-            <ColumnDefinition
-                Width="0.7*"></ColumnDefinition>
+                Width="*"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="25"></RowDefinition>
+                Height="20"></RowDefinition>
             <RowDefinition
-                Height="45"></RowDefinition>
+                Height="35"></RowDefinition>
             <RowDefinition
                 Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <Border>
+            <ctrl:TopBar
+                Grid.Column="0"
+                Grid.Row="0" />
+        </Border>
 
-        <Grid
-            Grid.Row="0"
-            Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Background="{StaticResource DarkBackGround}"
-            HorizontalAlignment="Stretch">
-            <StackPanel
-                Orientation="Horizontal"
-                HorizontalAlignment="Right">
-                <Button
-                    Width="24"
-                    Padding="0"
-                    Name="BtnMinimize"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}"
-                    Foreground="{StaticResource DarkForeGround}"
-                    Height="24"
-                    Click="BtnMinimize_Click">
-                    <md:PackIcon
-                        Kind="WindowMinimize"></md:PackIcon>
-                </Button>
-                <Button
-                    Width="24"
-                    Padding="0"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}"
-                    Foreground="{StaticResource DarkForeGround}"
-                    Height="24"
-                    Click="Button_Click">
-                    <md:PackIcon
-                        Kind="WindowMaximize"></md:PackIcon>
-                </Button>
-                <Button
-                    Width="24"
-                    Name="btnClose"
-                    Padding="0"
-                    Background="{x:Null}"
-                    BorderBrush="{x:Null}"
-                    Foreground="{StaticResource DarkForeGround}"
-                    Height="24"
-                    Click="btnClose_Click">
-                    <md:PackIcon
-                        Kind="WindowClose"></md:PackIcon>
-                </Button>
-            </StackPanel>
-        </Grid>
-
-
-
+        
 
         <Border
             Grid.Column="1"
             Grid.Row="1"
             BorderBrush="{StaticResource DarkBackGround}"
-            BorderThickness="0,0,0,1">
+            BorderThickness="0,0,0,0">
             <md:ColorZone
                 Background="{StaticResource PrimaryBackGround}"
                 VerticalAlignment="Stretch">
@@ -180,70 +136,33 @@
 
         </Border>
 
+        <Border
+            Grid.Row="1"
+            BorderThickness="0,0,0,1">
+            <ctrl:ToolBar
+                Filter="{Binding MenuVM.FilterText,  UpdateSourceTrigger=PropertyChanged}"
+                FilterWidth="150"
+                HorizontalAlignment="Left">
+
+            </ctrl:ToolBar>
+
+        </Border>
+
+
+
+
         <Grid
-            Grid.Column="0"
-            MaxWidth="250"
-            Grid.Row="1">
+            Grid.Column="0" 
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
             <Border
-                BorderBrush="{StaticResource DarkBackGround}"
+                Grid.Column="0"
+                Background="#fff"
                 BorderThickness="0,0,0,0">
-                <md:ColorZone
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Stretch"
-                    Padding="0,5,0,0"
-                    Background="{StaticResource PrimaryBackGround}">
-                    <Grid>
-                        <ToggleButton
-                            x:Name="MenuToggleButton"
-                            Style="{StaticResource MaterialDesignHamburgerToggleButton}"
-                            IsChecked="False"
-                            Margin="3 3 0 0"
-                            Width="24"
-                            Height="24"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            AutomationProperties.Name="HamburgerToggleButton" />
-
-                        <TextBox
-                            Grid.Column="0"
-                            Margin="40 5 5 0"
-                            Padding="0 0 0 0 "
-                            Height="22"
-                            VerticalContentAlignment="Center"
-                            md:HintAssist.Hint="Pesquisar"
-                            Background="{StaticResource LightBackGround}"
-                            Foreground="{StaticResource LightForeGround}"
-                            Text="{Binding MenuVM.FilterText,  UpdateSourceTrigger=PropertyChanged}"
-                            VerticalAlignment="Top" />
-
-                        <Button
-                            Grid.Column="0"
-                            Margin="-30 0 5 0"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Style="{DynamicResource MaterialDesignToolButton}">
-                            <md:PackIcon
-                                Kind="Magnify"
-                                Opacity=".56" />
-                        </Button>
-                    </Grid>
-                </md:ColorZone>
-            </Border>
-        </Grid>
-
-
-        <DockPanel
-            Grid.Column="0"
-            Grid.Row="2"
-            DockPanel.Dock="Left">
-
-
-            <md:ColorZone
-                Mode="Light"
-                Background="White"
-                VerticalAlignment="Stretch"
-                MinWidth="200"
-                MinHeight="100">
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -258,30 +177,30 @@
                     <mLocal:MenuListView />
 
                 </Grid>
-            </md:ColorZone>
 
 
-        </DockPanel >
+            </Border>
 
-        <Border
-            BorderThickness="1,0,0,0"
-            BorderBrush="{StaticResource DarkBackGround}"
-            Grid.Column="1"
-            Background="White"
-            Grid.Row="2">
-            
-            <ScrollViewer
-                x:Name="MainScrollViewer"
-                md:ScrollViewerAssist.IsAutoHideEnabled="True">
+            <Border
+                Grid.Column="1"
+                Background="#F3F2F1"
+               >
 
-                <ContentControl
-                    mLocal:RunTimeViewLocator.AutoLocateView="{Binding SelectedModel}">
+                <ScrollViewer
+                    x:Name="MainScrollViewer"
+                    md:ScrollViewerAssist.IsAutoHideEnabled="True">
 
-                </ContentControl>
+                    <ContentControl
+                        mLocal:RunTimeViewLocator.AutoLocateView="{Binding SelectedModel}">
+
+                    </ContentControl>
 
 
-            </ScrollViewer>
-        </Border>
+                </ScrollViewer>
+            </Border>
+
+        </Grid>
+       
 
 
     </Grid>

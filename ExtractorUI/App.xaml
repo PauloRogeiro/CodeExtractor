@@ -10,12 +10,22 @@
 
         <ResourceDictionary>
             <Color
-                x:Key="DarkColor">#005b9f</Color>
+                x:Key="DarkColor">#c8713d</Color>
             <Color
-                x:Key="MidColor">#0288d1</Color>
+                x:Key="MidColor">#ffa069</Color>
             <Color
-                x:Key="LightColor">#5eb8ff</Color>
+                x:Key="LightColor">#ffd298</Color>
 
+
+
+            <Color
+                x:Key="SecundaryDarkColor">#c8713d</Color>
+            <Color
+                x:Key="SecundaryMidColor">#ffa069</Color>
+            <Color
+                x:Key="SecundaryLightColor">#ffd298</Color>
+            
+            
             <Color
                 x:Key="DarkColorText">#ffff</Color>
             <Color
@@ -36,6 +46,7 @@
                 x:Key="AccentDarkText">#000</Color>
 
 
+             <!--Primary colors-->
             <SolidColorBrush
                 x:Key="PrimaryBackGround"
                 Color="{StaticResource MidColor}" />
@@ -49,7 +60,22 @@
                 x:Key="DarkBackGround"
                 Color="{StaticResource DarkColor}" />
 
+            <!--Secundarey colors-->
+            <SolidColorBrush
+                x:Key="SecundaryBackGround"
+                Color="{StaticResource SecundaryMidColor}" />
 
+
+            <SolidColorBrush
+                x:Key="SecundaryLightBackGround"
+                Color="{StaticResource SecundaryLightColor}" />
+
+            <SolidColorBrush
+                x:Key="SecundaryDarkBackGround"
+                Color="{StaticResource SecundaryDarkColor}" />
+
+            
+            <!--Accent and foreGrounds-->
             <SolidColorBrush
                 x:Key="PrimaryForeGround"
                 Color="{StaticResource MidColorText}" />
@@ -87,10 +113,6 @@
                     Source="Themes/StateCard.xaml" />
 
                 <ResourceDictionary>
-
-               
-
-
 
 
                     <ResourceDictionary.MergedDictionaries>

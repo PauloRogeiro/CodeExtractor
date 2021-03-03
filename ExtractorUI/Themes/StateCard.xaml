@@ -6,81 +6,19 @@
 
 
     <ResourceDictionary.MergedDictionaries>
-
+        
+        
+        
         <ResourceDictionary>
 
-            <Color
-                x:Key="DarkColor">#005b9f</Color>
-            <Color
-                x:Key="MidColor">#0288d1</Color>
-            <Color
-                x:Key="LightColor">#5eb8ff</Color>
-
-            <Color
-                x:Key="DarkColorText">#ffff</Color>
-            <Color
-                x:Key="MidColorText">#000</Color>
-            <Color
-                x:Key="LightColorText">#000</Color>
-
-            <Color
-                x:Key="AccentLight">#82f7ff</Color>
-
-            <Color
-                x:Key="AccentDark">#0094cc</Color>
-
-            <Color
-                x:Key="AccentLightText">#000</Color>
-
-            <Color
-                x:Key="AccentDarkText">#000</Color>
-
-
-            <SolidColorBrush
-                x:Key="PrimaryBackGround"
-                Color="{StaticResource MidColor}" />
-
-
-            <SolidColorBrush
-                x:Key="LightBackGround"
-                Color="{StaticResource LightColor}" />
-
-            <SolidColorBrush
-                x:Key="DarkBackGround"
-                Color="{StaticResource DarkColor}" />
-
-
-            <SolidColorBrush
-                x:Key="PrimaryForeGround"
-                Color="{StaticResource MidColorText}" />
-
-
-            <SolidColorBrush
-                x:Key="LightForeGround"
-                Color="{StaticResource LightColorText}" />
-
-            <SolidColorBrush
-                x:Key="DarkForeGround"
-                Color="{StaticResource DarkColorText}" />
-
-
-            <SolidColorBrush
-                x:Key="AccentDarkBackGround"
-                Color="{StaticResource AccentDark}" />
-
-
-            <SolidColorBrush
-                x:Key="AccentLightBackGround"
-                Color="{StaticResource AccentLight}" />
-
-
-            <SolidColorBrush
-                x:Key="AccentLightForeGround"
-                Color="{StaticResource AccentLightText}" />
-
-            <SolidColorBrush
-                x:Key="AccentDarkForeGround"
-                Color="{StaticResource AccentDarkText}" />
+            <DropShadowEffect x:Key="shadow"
+                             ShadowDepth="2"
+                              
+                              Color="Black"
+                                Opacity="0.5"
+                              Direction="225"
+                              BlurRadius="2"
+                             />
 
         </ResourceDictionary>
 
@@ -103,34 +41,56 @@
         TargetType="{x:Type local:StateCard}">
 
         <Border
-            BorderThickness="1"
-            BorderBrush="{StaticResource DarkBackGround}" >
-            
-            <StackPanel>
-            <Border
-                x:Name="resizebar"
-                Background="{StaticResource DarkBackGround}">
+
+            Margin="8">
+
+            <Grid
+                Effect="{StaticResource shadow}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        MinWidth="200"
+                        Width="{TemplateBinding Width}"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border
+                    Grid.Row="0"
+                    Background="{DynamicResource SecundaryDarkBackGround }"
+                    Grid.Column="0" 
+                    Margin="-3,0,-3,0"
+                    x:Name="resizebar">
 
 
-                <Button
-                    Width="18"
-                    Height="18"
-                    x:Name="CloseButton"
-                    Background="{x:Null}"
-                    Command="{Binding Remove, RelativeSource={RelativeSource AncestorType=local:StateCard}}"
-                    HorizontalAlignment="Right">
+                        <Button
+                            Width="16"
+                            Height="16"
+                            x:Name="CloseButton"
+                            Background="{x:Null}"
+                            VerticalAlignment="Center"
+                            Command="{Binding Remove, RelativeSource={RelativeSource AncestorType=local:StateCard}}"
+                            HorizontalAlignment="Right">
 
-                    <md:PackIcon
-                        Kind="WindowClose"
-                        VerticalAlignment="Center"
-                        Width="18"
-                        HorizontalAlignment="Center" />
-                </Button>
+                            <md:PackIcon
+                                Kind="WindowClose"
+                                VerticalAlignment="Center"
+                                Width="16"
+                     
+                                HorizontalAlignment="Center" />
+                        </Button>
+
+
+        
 
             </Border>
             <md:Flipper
-                Margin="4"
-                md:ShadowAssist.ShadowDepth="Depth0"
+                Grid.Column="0"
+                Grid.Row="1"
+                Background="White"
                 Style="{StaticResource MaterialDesignCardFlipper}">
                 <md:Flipper.FrontContent>
                     <Grid>
@@ -144,56 +104,62 @@
 
                         <Grid.RowDefinitions>
                             <RowDefinition
-                                Height="150" />
+                                    Height="150" />
                             <RowDefinition
                                 Height="*"
                                 MinHeight="100" />
                         </Grid.RowDefinitions>
 
 
-
-
                         <Border
                             Grid.Row="0"
-                            x:Name="header"
-                            Background="{StaticResource PrimaryBackGround}">
+                                Grid.Column="0"
+                                x:Name="header"
+                                Background="{DynamicResource SecundaryBackGround}"
+                                Width="{TemplateBinding Width}"
+                                        >
                             <md:PackIcon
                                 Kind="CardsOutline"
-                                Height="64"
-                                Width="64"
+                                Height="30"
+                                Width="30"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center" />
 
                         </Border>
 
 
-                       
-                        <StackPanel
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            x:Name="content"
-                            HorizontalAlignment="Stretch"
-                            VerticalAlignment="Center">
+                        <Border
+                                Grid.Row="1"
+                            Background="White"
+                                Grid.Column="0">
+                            <StackPanel
 
-                            <ContentPresenter
-                                x:Name="ContentPresenter"
-                                Content="{TemplateBinding ViewState}"
-                                ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
-                                ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
-                                ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
-                            </ContentPresenter>
+                                x:Name="content"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center">
+
+                                <ContentPresenter
+                                    x:Name="ContentPresenter"
+                                    Width="{TemplateBinding Width}"
+                                    Content="{TemplateBinding ViewState}"
+                                    ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                    ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
+                                </ContentPresenter>
 
 
-                            <Button
-                                    x:Name="EditButton"
-                                    Style="{StaticResource MaterialDesignFlatButton}"
-                                Command="{x:Static md:Flipper.FlipCommand}"
-                                Margin="0 4 0 0">
-                                Editar
-                            </Button>
-                        </StackPanel>
+                                <Button
+                                        x:Name="EditButton"
+                                        Foreground="{DynamicResource SecundaryBackGround}"
+                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                    Command="{x:Static md:Flipper.FlipCommand}"
+                                    >
+                                    Editar
+                                </Button>
+                            </StackPanel>
+                         </Border>
 
-                    </Grid>
+                        </Grid>
                 </md:Flipper.FrontContent>
                 <md:Flipper.BackContent>
                     <Grid>
@@ -218,7 +184,7 @@
                         <Border
                             Grid.Row="0"
                             Grid.Column="0"
-                            Background="{StaticResource PrimaryBackGround}">
+                            Background="{DynamicResource SecundaryBackGround}">
                             <StackPanel 
                                 
                                 Margin="5"
@@ -236,7 +202,8 @@
 
                                     <Button 
                                     x:Name="SaveButton"
-                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                    Foreground="{DynamicResource LightForeGround}"
+                                    Style="{StaticResource MaterialDesignFlatButton}"
                                     Command="{x:Static md:Flipper.FlipCommand}"
                                     HorizontalAlignment="Center"
                                     Margin="0 4 0 0">
@@ -251,7 +218,7 @@
 
                 </md:Flipper.BackContent>
             </md:Flipper>
-            </StackPanel>
+            </Grid>
         </Border>
        
         <ControlTemplate.Triggers>
