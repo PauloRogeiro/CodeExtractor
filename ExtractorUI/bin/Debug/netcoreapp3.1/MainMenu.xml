@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <List>
-  <Menu Text ="Home" Icone="FolderOpenOutline" Action =""  />
-  <Menu Text ="Home.Menu1" Icone="FolderOpenOutline" Action ="CardListView" />
-  <Menu Text ="Agrupamento"  Icone="FolderOpenOutline" Action="" />
-  <Menu Text ="Agrupamento.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
-  <Menu Text ="AgrupamentoLongo"  Icone="FolderOpenOutline" Action="" />
-  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
-  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
-  <Menu Text ="AgrupamentoLongo.Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+
+  <Menu Group="Fiscal"              Text ="Menu1"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Group="Fiscal"       Text ="Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Group="Fiscal"  Text ="Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Group="Fiscal"  Text ="Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
+  <Menu Group="Fiscal"  Text ="Menu2"  Icone="FolderOpenOutline" Action="CardListView" />
        
 </List>

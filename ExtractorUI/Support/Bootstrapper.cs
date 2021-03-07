@@ -79,13 +79,24 @@ namespace app
             container.Register(Classes.FromAssembly(typeof(MainWindowViewModel).Assembly)
                 .Where(x => x.Name.EndsWith("ViewModel"))
                 .Configure(x => x.LifeStyle.Is(LifestyleType.Transient)));
+
+
+            container.Register(Classes.FromAssembly(typeof(MainWindowView).Assembly)
+                .Where(x => x.Name.EndsWith("ViewModelDesign"))
+                .Configure(x => x.LifeStyle.Is(LifestyleType.Transient))
+
+                  );
         }
 
         private void RegisterViews()
         {
             container.Register(Classes.FromAssembly(typeof(MainWindowView).Assembly)
                 .Where(x => x.Name.EndsWith("View"))
-                .Configure(x => x.LifeStyle.Is(LifestyleType.Transient)));
+                .Configure(x => x.LifeStyle.Is(LifestyleType.Transient))
+                
+                );
+
+
         }
     }
 }

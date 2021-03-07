@@ -18,8 +18,7 @@
         <ControlTemplate
             x:Key="CardList"
             TargetType="ContentControl">
-            <Grid x:Name="Root"
-                d:DataContext="{d:DesignInstance des:CardListViewModel, IsDesignTimeCreatable=True}">
+            <Grid x:Name="Root">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -80,7 +79,7 @@
 
                                         <local:StateCard.ViewState>
                                             <ContentControl>
-                                                <StackPanel>
+                                                <StackPanel Width="200">
 
                                                     <TextBlock
                                                         HorizontalAlignment="Center"
@@ -109,6 +108,7 @@
                                             <ContentControl>
 
                                                 <StackPanel
+                                                    Width="200"
                                                     Margin="5"
                                                     Orientation="Vertical">
 

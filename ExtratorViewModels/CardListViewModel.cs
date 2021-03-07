@@ -22,11 +22,7 @@ namespace app
         {
             _add = new RelayCommand(AddNew);
             _cards = new ObservableCollection<CardViewModel>();
-            _cards.Add(new CardViewModel(this) { Nome = "add", Descricao="", Icone= "PlusThick" });
-            _cards.Add( new CardViewModel(this) { Nome = "card1", Descricao = "descrição muito longa" } );
-            _cards.Add(new CardViewModel(this) { Nome = "card1", Descricao = "descrição curta" });
-
-        } 
+        }
 
         public ObservableCollection<CardViewModel> Cards
         {

@@ -50,7 +50,7 @@
                                         md:HintAssist.Hint="Pesquisar"
                                         Background="{StaticResource SecundaryLightBackGround}"
                                         Foreground="{StaticResource LightForeGround}"
-                                        Text="{Binding Filter,  ElementName=this}"
+                                        Text="{Binding Filter,  ElementName=this, UpdateSourceTrigger=PropertyChanged}"
                                         VerticalAlignment="Top" />
 
                                     <Button

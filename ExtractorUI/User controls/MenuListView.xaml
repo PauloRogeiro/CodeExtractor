@@ -5,19 +5,167 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:app"
-    xmlns:des="clr-namespace:app.design;assembly=ViewModels"
-    xmlns:framework="clr-namespace:MvvmFramework;assembly=MvvmFramework"
-             framework:AutoViewModelLocator.AutoAttachViewModel="false"
-    DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=Window}}"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:des="clr-namespace:app.design;assembly=ViewModels"
+             xmlns:framework="clr-namespace:MvvmFramework;assembly=MvvmFramework"
+             DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=Window}}"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="200">
 
+
+
+    <UserControl.Resources>
+
+
+        <Style x:Key="containner" TargetType="{x:Type Grid}">
+
+            <Setter
+                Property="Width"
+                Value="180" />
+            <Style.Triggers>
+                
+                <DataTrigger
+                    Value="False"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton}">
+
+                    <Setter
+                        Property="Width"
+                        Value="40" />
+
+
+                </DataTrigger>
+
+
+                <DataTrigger
+                    Value="True"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton}">
+
+                    <Setter
+                        Property="Width"
+                        Value="180" />
+
+
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding IsChecked, ElementName=MenuToggleButton}" Value="False">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard
+                                SpeedRatio="2"
+                                DecelerationRatio=".5"
+                                AccelerationRatio=".5">
+                                
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="Width"
+                                    To="40" />
+
+                            </Storyboard>
+
+                        </BeginStoryboard>
+
+                    </DataTrigger.EnterActions>
+
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard
+                                SpeedRatio="2"
+                                DecelerationRatio=".5"
+                                AccelerationRatio=".5">
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="Width"
+                                    To="180" />
+
+                            </Storyboard>
+
+                        </BeginStoryboard>
+
+                    </DataTrigger.ExitActions>
+                    
+                </DataTrigger>
+
+
+            </Style.Triggers>
+            
+            
+        </Style>
+        
+
+        <Style TargetType="{x:Type local:MenuView}">
+            
+            <Style.Triggers>
+
+                <DataTrigger
+                    Value="False"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton }">
+
+                    <Setter
+                        Property="CollapseComponent"
+                        Value="True" />
+
+
+                </DataTrigger>
+
+
+
+                <DataTrigger
+                    Value="True"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton }">
+
+                    <Setter
+                        Property="CollapseComponent"
+                        Value="False" />
+
+                </DataTrigger>
+
+            </Style.Triggers>
+            
+            
+        </Style>
+
+
+        <Style
+            TargetType="{x:Type TextBox}">
+
+            <Style.Triggers>
+
+                <DataTrigger
+                    Value="False"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton }">
+
+                    <Setter
+                        Property="Visibility"
+                        Value="Collapsed" />
+
+
+                </DataTrigger>
+
+
+
+                <DataTrigger
+                    Value="True"
+                    Binding="{Binding IsChecked, ElementName=MenuToggleButton }">
+
+                    <Setter
+                        Property="Visibility"
+                        Value="Visible" />
+
+                    <Setter
+                        Property="Width"
+                        Value="160" />
+
+                </DataTrigger>
+
+            </Style.Triggers>
+
+
+        </Style>
+
+    </UserControl.Resources>
+        
     
-    
-    <Grid d:DataContext="{d:DesignInstance des:DesigMenuListViewModel, IsDesignTimeCreatable=True}">
+    <Grid Style="{StaticResource containner }">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
@@ -26,30 +174,95 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
 
             <Border>
-            <ItemsControl
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                BorderThickness="0"
- 
-                ItemsSource="{Binding  MenuVM.Menus}">
 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        
+                        <RowDefinition
+                            Height="25" />
+
+                        <RowDefinition
+                            Height="25" />
+
+                        <RowDefinition Height="*">
+
+                        </RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    
+                    <ToggleButton
+                        x:Name="MenuToggleButton"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Style="{DynamicResource MaterialDesignHamburgerToggleButton}"                        
+                        IsChecked="True"
+                        Margin="15,0,10,0"
+                        Width="20"
+                        Height="20"
+                        Foreground="{DynamicResource DarkBackGround}"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        AutomationProperties.Name="HamburgerToggleButton" />
+                    
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
                       
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <local:MenuView 
-                            Height="40"
-                            Offset="0" 
-                            Margin="20,0,0,0"                            
-                            Action="{Binding Action}" 
-                            MenuText="{Binding Text}"
-                            Icon="{Binding Icone}"
-                            Command="{Binding Selected}"
-                            Width="200"
-                            GroupName="Menus"
-                            />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                        <TextBox
+                            x:Name="Txt"                   
+                            Margin="10,5,0,0"
+                            VerticalContentAlignment="Center"
+                            HorizontalAlignment="Left"
+                            md:HintAssist.Hint="Pesquisar"
+                            Background="White"
+                            Foreground="{DynamicResource LightForeGround}"
+                            VerticalAlignment="Top" />
+
+                        <Button
+                            Width="30"
+                            Margin="-30,0,0,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Style="{DynamicResource MaterialDesignToolButton}">
+                            <md:PackIcon
+                                Kind="Magnify"
+                                Opacity=".56" />
+                        </Button>
+
+                    </StackPanel>
+
+
+                    <ItemsControl
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top"
+                        BorderThickness="0"
+                        ItemsSource="{Binding  MenuVM.Menus}">
+
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:MenuView
+                                    Height="35"
+                                    Offset="0"
+                                    Margin="10,0,0,0"
+                                    Action="{Binding Action}"
+                                    MenuText="{Binding Text}"
+                                    Icon="{Binding Icone}"
+                                    GroupValue="{Binding Group}"
+                                    Command="{Binding Selected}"                                
+                                    GroupName="Módulo" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    
+                </Grid>
+               
+
+                
             </Border>
 
 

@@ -11,6 +11,7 @@ namespace app
         public String Text { get; set; }
         public String Icone { get; set; }
         public String Action { get; set; }
+        public String Group { get; set; }
 
     }
 }

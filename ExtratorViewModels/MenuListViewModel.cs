@@ -10,7 +10,7 @@ namespace app
 
 
 
-        private List<MenuViewModel> _menus;
+        private List<MenuViewModel> _menus = new List<MenuViewModel>();
         private String _FilterText;
         private MenuViewModel _selectedMenu;
         private List<MenuViewModel> _allMenus;
@@ -61,12 +61,16 @@ namespace app
 
             foreach (var item in menus)
             {
-                _menus.Add(new MenuViewModel(this, item.Text,item.Icone,item.Action ) );
+                _menus.Add(new MenuViewModel(this, item.Text,item.Icone,item.Action, item.Group ) );
             }
 
             _allMenus = _menus;
 
         }
+
+
+
+
         protected MenuListViewModel()
         {
 

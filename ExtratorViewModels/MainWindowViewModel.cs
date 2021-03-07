@@ -23,7 +23,7 @@ namespace app
 
 
 
-        public MainWindowViewModel(String menuXMl, MenuListViewModel menus) : base()
+        public MainWindowViewModel( MenuListViewModel menus) : base()
         {
 
             _menuVM = menus;

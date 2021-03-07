@@ -206,7 +206,40 @@ namespace app
         public static readonly DependencyProperty GroupNameProperty =
             DependencyProperty.Register("GroupName", typeof(string), typeof(MenuView), new PropertyMetadata(null));
 
-      
+
+
+        public String GroupValue
+        {
+            get
+            {
+
+                return (String)GetValue(GroupValueProperty);
+            }
+            set { SetValue(GroupValueProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty GroupValueProperty =
+            DependencyProperty.Register("GroupValue", typeof(string), typeof(MenuView), new PropertyMetadata(null));
+
+
+
+        public bool CollapseComponent
+        {
+            get
+            {
+               
+                return (bool)GetValue(CollapseComponentProperty);
+            }
+            set { SetValue(CollapseComponentProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CollapseComponentProperty =
+            DependencyProperty.Register("CollapseComponent", typeof(bool), typeof(MenuView), new PropertyMetadata(false));
+
+
+
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static  DependencyProperty CommandProperty =
             DependencyProperty.Register("Command", typeof(ICommand), typeof(MenuView), new PropertyMetadata(null));

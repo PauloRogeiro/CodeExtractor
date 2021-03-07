@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives ;
 using System.Windows.Input;
 using MvvmFramework;
 using System.Reflection;
@@ -102,7 +103,7 @@ namespace app
         {
             base.OnApplyTemplate();
             Button btn = Template.FindName("SaveButton", this) as Button;
-            Button btnClose = Template.FindName("CloseButton", this) as Button;
+            ToggleButton btnClose = Template.FindName("CloseButton", this) as ToggleButton;
             Button btnEdit = Template.FindName("EditButton", this) as Button;
             btn.Click += new RoutedEventHandler(SaveAction);
             btnClose.Click += new RoutedEventHandler(RemoveAction);

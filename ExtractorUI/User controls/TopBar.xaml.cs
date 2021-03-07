@@ -29,7 +29,7 @@ namespace app.User_controls
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnMaximaze_Click(object sender, RoutedEventArgs e)
         {
             if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
             {

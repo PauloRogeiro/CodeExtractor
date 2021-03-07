@@ -8,8 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="20" d:DesignWidth="800">
     <Grid
-
-        Background="{StaticResource DarkBackGround}"
+        Background="{DynamicResource DarkBackGround}"
         HorizontalAlignment="Stretch">
 
         <Grid.ColumnDefinitions>
@@ -18,55 +17,65 @@
         
         
         <StackPanel
+            Grid.Column="0"
+            Grid.Row="0"
             Orientation="Horizontal"
             HorizontalAlignment="Right">
-            <Button
-                Width="15"
+            <ToggleButton
+                Width="15"                
                 Padding="0"
                 Name="BtnMinimize"
                 Background="{x:Null}"
-                BorderBrush="{x:Null}"
                 Foreground="{DynamicResource DarkForeGround}"
                 Height="15"
                 Click="BtnMinimize_Click">
+
                 <md:PackIcon
-                    Width="15"
-                    Height="15"
+                    TabIndex="0"
+                    Foreground="{DynamicResource DarkForeGround}"
+                    Width="14"
+                    Height="14"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Kind="WindowMinimize"></md:PackIcon>
-            </Button>
-            <Button
+                    Kind="WindowMinimize" />
+
+
+            </ToggleButton>
+
+            <ToggleButton
                 Width="15"
                 Padding="0"
+                Name="btnMaximaze"
                 Background="{x:Null}"
-                BorderBrush="{x:Null}"
                 Foreground="{DynamicResource DarkForeGround}"
                 Height="15"
-                Click="Button_Click">
+                Click="btnMaximaze_Click">
                 <md:PackIcon
-                    Width="15"
-                    Height="15"
+                    TabIndex="1"
+                    Foreground="{DynamicResource DarkForeGround}"
+                    Width="14"
+                    Height="14"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Kind="WindowMaximize"></md:PackIcon>
-            </Button>
-            <Button
+                    Kind="WindowMaximize" />
+            </ToggleButton>
+
+            <ToggleButton
                 Width="15"
                 Name="btnClose"
                 Padding="0"
                 Background="{x:Null}"
-                BorderBrush="{x:Null}"
-                Foreground="{DynamicResource DarkForeGround}"
                 Height="15"
+                Foreground="{DynamicResource DarkForeGround}"
                 Click="btnClose_Click">
                 <md:PackIcon
-                    Width="15"
-                    Height="15"
+                    Width="14"
+                    Height="14"
+                    Foreground="{DynamicResource DarkForeGround}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Kind="WindowClose"></md:PackIcon>
-            </Button>
+                    Kind="WindowClose" />
+            </ToggleButton>
         </StackPanel>
     </Grid>
 

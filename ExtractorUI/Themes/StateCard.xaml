@@ -8,21 +8,7 @@
     <ResourceDictionary.MergedDictionaries>
         
         
-        
-        <ResourceDictionary>
-
-            <DropShadowEffect x:Key="shadow"
-                             ShadowDepth="2"
-                              
-                              Color="Black"
-                                Opacity="0.5"
-                              Direction="225"
-                              BlurRadius="2"
-                             />
-
-        </ResourceDictionary>
-
-        
+       
 
         <ResourceDictionary
             Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
@@ -41,20 +27,22 @@
         TargetType="{x:Type local:StateCard}">
 
         <Border
+            BorderThickness="1,1,1,1"
+            Width="200"
 
-            Margin="8">
+            Margin="1"
+            Effect="{DynamicResource MaterialDesignShadowDepth2}"
+            >
 
-            <Grid
-                Effect="{StaticResource shadow}">
+            <Grid>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
-                        MinWidth="200"
-                        Width="{TemplateBinding Width}"></ColumnDefinition>
+                        Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="15"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
@@ -62,26 +50,26 @@
                     Grid.Row="0"
                     Background="{DynamicResource SecundaryDarkBackGround }"
                     Grid.Column="0" 
-                    Margin="-3,0,-3,0"
+                    Margin="0,0,0,0"
                     x:Name="resizebar">
 
 
-                        <Button
-                            Width="16"
-                            Height="16"
+                        <ToggleButton
+                            Width="14"
+                            Height="14"
                             x:Name="CloseButton"
-                            Background="{x:Null}"
                             VerticalAlignment="Center"
+                            Background="{DynamicResource SecundaryDarkBackGround }"
+                        Foreground="{DynamicResource DarkForeGround}"
                             Command="{Binding Remove, RelativeSource={RelativeSource AncestorType=local:StateCard}}"
                             HorizontalAlignment="Right">
 
                             <md:PackIcon
                                 Kind="WindowClose"
                                 VerticalAlignment="Center"
-                                Width="16"
-                     
+                                Width="14"
                                 HorizontalAlignment="Center" />
-                        </Button>
+                        </ToggleButton>
 
 
         
@@ -91,16 +79,15 @@
                 Grid.Column="0"
                 Grid.Row="1"
                 Background="White"
-                Style="{StaticResource MaterialDesignCardFlipper}">
+                    Width="200"
+                    Style="{StaticResource MaterialDesignCardFlipper}">
                 <md:Flipper.FrontContent>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition
-                                Width="*"
-                                MinWidth="200">
+                            <ColumnDefinition  Width="*" />
 
-                            </ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+
+                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
                             <RowDefinition
@@ -112,12 +99,11 @@
 
 
                         <Border
-                            Grid.Row="0"
+                                Grid.Row="0"
                                 Grid.Column="0"
-                                x:Name="header"
+                                x:Name="header"                               
                                 Background="{DynamicResource SecundaryBackGround}"
-                                Width="{TemplateBinding Width}"
-                                        >
+                                Width="{TemplateBinding Width}">
                             <md:PackIcon
                                 Kind="CardsOutline"
                                 Height="30"
@@ -127,49 +113,45 @@
 
                         </Border>
 
-
-                        <Border
+                        <StackPanel
                                 Grid.Row="1"
-                            Background="White"
-                                Grid.Column="0">
-                            <StackPanel
-
+                                Background="White"
+                                Grid.Column="0"                                
                                 x:Name="content"
-                                HorizontalAlignment="Stretch"
+                                Orientation="Vertical"
                                 VerticalAlignment="Center">
 
-                                <ContentPresenter
-                                    x:Name="ContentPresenter"
-                                    Width="{TemplateBinding Width}"
-                                    Content="{TemplateBinding ViewState}"
-                                    ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
-                                    ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
-                                    ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
-                                </ContentPresenter>
+                            <ContentPresenter
+                                x:Name="ContentPresenter"
+                                Width="{TemplateBinding Width}"
+                                Content="{TemplateBinding ViewState}"
+                                ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}">
+                            </ContentPresenter>
 
 
-                                <Button
-                                        x:Name="EditButton"
-                                        Foreground="{DynamicResource SecundaryBackGround}"
-                                        Style="{StaticResource MaterialDesignFlatButton}"
+                            <Button     
+                                    Width="100"
+                                    x:Name="EditButton"
+                                    Foreground="{DynamicResource LightForeGround}"
+                                    Style="{DynamicResource MaterialDesignFlatButton}"
                                     Command="{x:Static md:Flipper.FlipCommand}"
-                                    >
-                                    Editar
-                                </Button>
-                            </StackPanel>
-                         </Border>
-
+                                >
+                                Editar
+                            </Button>
+                            
+                        </StackPanel>
+                   
                         </Grid>
                 </md:Flipper.FrontContent>
-                <md:Flipper.BackContent>
+                    <md:Flipper.BackContent>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition
-                                Width="*"
-                                MinWidth="200">
+                                <ColumnDefinition
+                                    Width="*" />
 
-                            </ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
 
@@ -202,8 +184,9 @@
 
                                     <Button 
                                     x:Name="SaveButton"
+                                    Width="100"
                                     Foreground="{DynamicResource LightForeGround}"
-                                    Style="{StaticResource MaterialDesignFlatButton}"
+                                        Style="{DynamicResource MaterialDesignFlatButton}"
                                     Command="{x:Static md:Flipper.FlipCommand}"
                                     HorizontalAlignment="Center"
                                     Margin="0 4 0 0">
@@ -258,7 +241,7 @@
                     <Storyboard>
 
                         <ColorAnimation
-                            To="{x:Null}"
+                            To="DarkBlue"
                             Duration="0:0:0.3"
                             Storyboard.TargetProperty="Foreground.Color"
                             Storyboard.TargetName="CloseButton" />

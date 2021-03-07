@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace app
 {
-    public static class RunTimeViewLocator
+    public static class ViewLocator
     {
         public static Object GetAutoLocateView(DependencyObject obj)
         {
@@ -24,7 +24,7 @@ namespace app
 
         public static readonly DependencyProperty AutoLocateViewProperty =
             DependencyProperty.RegisterAttached("AutoLocateView",
-                typeof(Object), typeof(RunTimeViewLocator),
+                typeof(Object), typeof(ViewLocator),
                 new PropertyMetadata(null, AutoLocateViewChanged));
 
        
@@ -32,27 +32,30 @@ namespace app
 
         private static void AutoLocateViewChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            if (DesignerProperties.GetIsInDesignMode(d))
-            {
-                return;
-            }
-
+            String viewModelName = "ViewModel";
             if (e.NewValue == null)
             {
                 return;
             }
 
+
+            if (DesignerProperties.GetIsInDesignMode(d))
+            {
+                viewModelName += "Design";
+            }
+
+
             ContentControl c = (ContentControl)d;
 
             var modelType = e.NewValue.GetType();
-            string viewTypeName = modelType.FullName.Replace("ViewModel", "View");
+            string viewTypeName = modelType.FullName.Replace(viewModelName, "View");
             var allExportedTypes = new List<Type>();
 
-            allExportedTypes.AddRange(typeof(RunTimeViewLocator).Assembly.GetExportedTypes());
+            allExportedTypes.AddRange(typeof(ViewLocator).Assembly.GetExportedTypes());
 
             Type viewModelType = allExportedTypes.Single(x => x.FullName.Equals(viewTypeName));
-            object viewModel = IoC.GetInstance(viewModelType, null);
-            c.Content = viewModel;
+            object view = IoC.GetInstance(viewModelType, null);
+            c.Content = view;
         }
 
 
